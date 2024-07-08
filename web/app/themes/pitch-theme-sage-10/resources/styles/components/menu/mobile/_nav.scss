@@ -1,0 +1,50 @@
+.c-menu {
+  #navbar-mobile {
+    margin-top: 50px;
+
+    #navbarSupportedContent {
+      width: 100%;
+
+      li {
+        &.menu-item {
+          display: block;
+          padding: 0;
+
+          a {
+            color: $mobile-nav-item-color;
+            text-align: center;
+
+            &:hover {
+              color: $mobile-nav-item-color-hover;
+            }
+          }
+        }
+      }
+
+      .dropdown-menu {
+        padding-left: 0;
+        background-color: $mobile-bg-dropdown-menu;
+
+        li {
+          &.menu-item {
+            a {
+              color: $mobile-dropdown-nav-item-color;
+              padding: 0;
+
+              &:hover {
+                background-color: $mobile-dropdown-nav-item-color-hover;
+              }
+            }
+          }
+        }
+
+        &.show {
+          top: 100% !important;
+          left: 0;
+          position: static !important;
+          transform: inherit !important;
+        }
+      }
+    }
+  }
+}

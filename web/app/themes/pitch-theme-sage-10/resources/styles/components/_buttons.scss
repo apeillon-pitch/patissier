@@ -1,0 +1,15 @@
+.btn {
+  transition: 0.3s ease-out;
+
+  &.btn-secondary {
+    color: black;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+
+  &.btn-tertiary {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+}

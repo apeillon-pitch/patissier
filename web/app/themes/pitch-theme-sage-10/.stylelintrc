@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "@roots/sage/stylelint-config",
+  ],
+  "rules": {
+    'property-no-vendor-prefix': null,
+    'at-rule-no-vendor-prefix': null,
+    'color-function-notation': null,
+    'indentation': null,
+    'at-rule-no-unknown': null
+  },
+  "customSyntax": "postcss-scss",
+}

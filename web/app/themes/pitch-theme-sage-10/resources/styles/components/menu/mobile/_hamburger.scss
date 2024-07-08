@@ -1,0 +1,84 @@
+.hamburger {
+  position: relative;
+  display: flex;
+  width: 23px;
+  right: 0;
+  align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  div {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+
+    &.meat {
+      margin: 5px 0;
+      -webkit-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
+    }
+
+    &.bottom-bun {
+      -webkit-transition: all 400ms ease-in-out;
+      transition: all 400ms ease-in-out;
+    }
+  }
+
+  &:hover {
+    div {
+      width: 100%;
+
+      &.top-bun {
+        -webkit-animation: burger-hover 1s infinite ease-in-out alternate;
+        animation: burger-hover 1s infinite ease-in-out alternate;
+      }
+
+      &.meat {
+        -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+        animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+      }
+
+      &.bottom-bun {
+        -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+        animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes burger-hover {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes burger-hover {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

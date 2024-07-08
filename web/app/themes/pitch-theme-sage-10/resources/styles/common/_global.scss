@@ -1,0 +1,38 @@
+body {
+  background: white;
+
+  .section {
+    picture {
+      &.w-100 {
+        img {
+          width: 100%;
+        }
+      }
+
+      &.h-100 {
+        img {
+          height: 100%;
+        }
+      }
+
+      &.img-fluid {
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+      }
+
+      &.d-block {
+        img {
+          display: block;
+        }
+      }
+
+      &.mx-auto {
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

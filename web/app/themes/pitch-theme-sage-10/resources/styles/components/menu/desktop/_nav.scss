@@ -1,0 +1,152 @@
+#nav-wrapper {
+  flex: 1;
+  margin: 0 0 0 2.5rem;
+
+  nav {
+    &.nav-primary {
+      padding: 0;
+
+      #navbarSupportedContent {
+        height: 100%;
+
+        ul {
+          &.navbar-nav {
+            height: 100%;
+            flex-wrap: nowrap;
+            gap: 30px;
+
+            li {
+              &.dropdown {
+                padding-right: 10px;
+              }
+
+              &.menu-item {
+                height: 100%;
+
+                a {
+                  &.nav-link {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    color: black;
+                    font-weight: 600;
+                    padding: 0;
+
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      display: block;
+                      width: 0;
+                      height: 2px;
+                      left: 50%;
+                      transform: translateX(-50%);
+                      bottom: -3px;
+                      background-color: black;
+                      transition: all 0.3s ease-in-out;
+                    }
+
+                    &.dropdown-toggle {
+                      z-index: 888;
+
+                      &::after {
+                        content: url("../../../../images/fleche.svg");
+                        position: absolute;
+                        border: 0;
+                        margin-left: 0;
+                        right: -20px;
+                        top: 40%;
+                        transform: translateY(-50%);
+                        vertical-align: inherit;
+                        transition: all 0.2s;
+                      }
+                    }
+
+                    &.dropdown-toggle.show {
+                      &::after {
+                        content: url("../../../../images/fleche.svg");
+                        top: 59%;
+                        transform: translateY(-50%) rotate(180deg);
+                      }
+                    }
+
+                    &.dropdown-toggle.show,
+                    &:hover,
+                    &.active {
+                      &::before {
+                        width: 100%;
+                      }
+
+                      &::after {
+                        top: 59%;
+                        transform: translateY(-50%) rotate(180deg);
+                        transition: all 0.2s;
+                      }
+                    }
+                  }
+                }
+
+                .dropdown-menu {
+                  border: 0;
+                  padding-top: 35px;
+                  top: 25px;
+                  border-radius: 24px;
+                  z-index: 9;
+                  background: transparent !important;
+
+                  div {
+                    padding: 16px 24px;
+                    border-radius: 24px;
+                    background-color: white;
+                    transition: all ease-in-out 0.3s;
+                  }
+
+                  li {
+                    &.menu-item {
+                      padding: 10px 0;
+
+                      a {
+                        &.dropdown-item {
+                          color: black;
+                          font-size: 1rem;
+                          font-weight: 600;
+                          padding: 0;
+
+                          &:hover,
+                          &.active {
+                            color: black;
+                            background-color: transparent;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+
+    div {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 25%);
+    }
+  }
+}

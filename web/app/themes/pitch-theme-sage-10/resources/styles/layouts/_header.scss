@@ -1,0 +1,13 @@
+header {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background-color: white;
+}
+
+.nav-is-stuck {
+  header {
+    box-shadow: 0 2px 10px 0 rgb(7 7 7 / 15%);
+    transition: all 0.3s ease-in-out;
+  }
+}
