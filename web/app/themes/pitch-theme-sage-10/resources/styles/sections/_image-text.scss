@@ -1,0 +1,39 @@
+.section {
+  &.image-text {
+    &.style-one {
+      .wp-text {
+        gap: 1.5rem;
+
+        .wp-heading {
+          gap: 8px;
+        }
+      }
+
+      .wp-item {
+        height: calc(100% - 50% - 0.75rem);
+
+        figure {
+          height: 100%;
+        }
+      }
+
+      figure {
+        &.style-one {
+          height: 636.01px;
+        }
+
+        &.primary {
+          box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
+        }
+
+        &.secondary {
+          box-shadow: 0 4px 5px 0 rgb(0 0 0 / 5%);
+        }
+      }
+
+      .wp-buttons {
+        gap: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,7 +1,31 @@
 body {
-  background: white;
+  font-family: $poppins;
+  font-weight: 400;
+  color: $grey-one;
 
   .section {
+    position: relative;
+    padding: 4.25rem 0;
+
+    figure {
+      &.cover {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
     picture {
       &.w-100 {
         img {

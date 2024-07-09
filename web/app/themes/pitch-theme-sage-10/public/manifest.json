@@ -1,5 +1,5 @@
 {
-  "app.css": "css/app.ee229a.css",
+  "app.css": "css/app.aad522.css",
   "app.js": "js/app.85df5d.js",
   "menu.js": "js/menu.9d3e22.js",
   "editor.css": "css/editor.31d6cf.css",
@@ -8,6 +8,8 @@
   "js/575.fb8f9f.js": "js/575.fb8f9f.js",
   "js/70.e1dccd.js": "js/70.e1dccd.js",
   "js/459.d17f74.js": "js/459.d17f74.js",
+  "images/flex_image_text_style_one.jpg": "images/flex_image_text_style_one.834f55.jpg",
+  "images/flex_title_text_style_one.jpg": "images/flex_title_text_style_one.f56a92.jpg",
   "images/ms-icon-310x310.png": "images/ms-icon-310x310.9f9ea6.png",
   "images/apple-icon-180x180.png": "images/apple-icon-180x180.c5b1e9.png",
   "images/apple-icon-precomposed.png": "images/apple-icon-precomposed.9a53b7.png",
@@ -41,5 +43,6 @@
   "images/manifest.json": "images/manifest.fb5be1.json",
   "images/fleche.svg": "images/fleche.d0bcb1.svg",
   "images/browserconfig.xml": "images/browserconfig.fbdd07.xml",
+  "images/arrow.svg": "images/arrow.19bbb3.svg",
   "images/.gitkeep": "images/.gitkeep.31d6cf"
 }

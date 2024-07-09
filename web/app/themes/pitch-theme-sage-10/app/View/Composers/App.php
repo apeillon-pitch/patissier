@@ -25,9 +25,10 @@ class App extends Composer
     public function with()
     {
         return [
-            'header' => $this->headerData(),
-            'mainMenu' => $this->mainMenu(),
             'siteName' => $this->siteName(),
+            'header' => $this->headerData(),
+            'footer' => $this->footerData(),
+            'mainMenu' => $this->mainMenu(),
             'sectionData' => $this->sectionData(),
         ];
     }
@@ -50,6 +51,20 @@ class App extends Composer
     public function headerData()
     {
         $data = get_field('header_group', 'options');
+        $data = array(
+            'data' => $data,
+        );
+        return $data;
+    }
+
+    /**
+     * Header
+     *
+     * @return array
+     */
+    public function footerData()
+    {
+        $data = get_field('footer_group', 'options');
         $data = array(
             'data' => $data,
         );

@@ -1,3 +1,18 @@
+/** Fonts */
+$merriweather: "Merriweather", serif;
+$poppins: "Poppins", serif;
+
+/** Colors */
+$grey-one: #6b6b6b;
+$grey-two: #323232;
+$grey-three: #393838;
+$black-one: #161616;
+$yellow-one: #ffd33b;
+$pink-one: #9a436f;
+
+$primary: $yellow-one;
+$secondary: $pink-one;
+
 /** Menu mobile */
 $mobile-bg-mask: #777;
 $mobile-nav-item-color: black;
@@ -7,9 +22,9 @@ $mobile-dropdown-nav-item-color: black;
 $mobile-dropdown-nav-item-color-hover: white;
 
 /** Buttons */
-$btn-font-size: 0.813rem;
+$btn-font-size: 0.875rem;
 $btn-line-height: 1.25rem;
-$btn-border-radius: 0.375rem;
-$btn-padding-y: 0.625rem;
-$btn-padding-x: 0.75rem;
+$btn-border-radius: 0.313rem;
+$btn-padding-y: 0.469rem;
+$btn-padding-x: 0.875rem;
 $btn-font-weight: 600;

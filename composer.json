@@ -91,6 +91,7 @@
     "wpackagist-plugin/imagify": "^2.1.1",
     "wpackagist-plugin/redirection": "^5.3.9",
     "wpackagist-plugin/wp-mail-smtp": "^3.7.0",
+    "wpackagist-plugin/instagram-feed": "^6.4.3",
     "wpackagist-plugin/advanced-nocaptcha-recaptcha": "^7.3.1",
     "roots/acorn": "^2.1"
   },

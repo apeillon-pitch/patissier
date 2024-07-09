@@ -1,10 +1,10 @@
 #nav-wrapper {
   flex: 1;
-  margin: 0 0 0 2.5rem;
+  margin: 0;
 
   nav {
     &.nav-primary {
-      padding: 0;
+      padding: 0.75rem 0;
 
       #navbarSupportedContent {
         height: 100%;
@@ -13,7 +13,7 @@
           &.navbar-nav {
             height: 100%;
             flex-wrap: nowrap;
-            gap: 30px;
+            gap: 2.625rem;
 
             li {
               &.dropdown {
@@ -29,22 +29,10 @@
                     display: flex;
                     align-items: center;
                     height: 100%;
-                    color: black;
-                    font-weight: 600;
+                    color: $grey-two;
+                    font-weight: 400;
+                    text-transform: uppercase;
                     padding: 0;
-
-                    &::before {
-                      content: "";
-                      position: absolute;
-                      display: block;
-                      width: 0;
-                      height: 2px;
-                      left: 50%;
-                      transform: translateX(-50%);
-                      bottom: -3px;
-                      background-color: black;
-                      transition: all 0.3s ease-in-out;
-                    }
 
                     &.dropdown-toggle {
                       z-index: 888;
@@ -73,10 +61,6 @@
                     &.dropdown-toggle.show,
                     &:hover,
                     &.active {
-                      &::before {
-                        width: 100%;
-                      }
-
                       &::after {
                         top: 59%;
                         transform: translateY(-50%) rotate(180deg);

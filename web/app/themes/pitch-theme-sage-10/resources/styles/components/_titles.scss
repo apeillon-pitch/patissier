@@ -1,3 +1,43 @@
+.overtitle,
+.subtitle,
 .section-title {
+  position: relative;
   display: block;
+  color: $black-one;
+  margin-bottom: 0;
+}
+
+.overtitle,
+.section-title {
+  font-weight: 700;
+}
+
+.overtitle {
+  font-family: $merriweather;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1;
+  padding-left: 2.25rem;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.5rem;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $black-one;
+  }
+}
+
+.section-title {
+  font-size: 2.625rem;
+  line-height: 3.938rem;
 }
