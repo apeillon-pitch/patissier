@@ -1,6 +1,7 @@
 .overtitle,
 .subtitle,
-.section-title {
+.section-title,
+.title {
   position: relative;
   display: block;
   color: $black-one;
@@ -16,6 +17,12 @@
   font-family: $merriweather;
   font-size: 1.125rem;
   line-height: 1;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2.118rem;
 }
 
 .subtitle {

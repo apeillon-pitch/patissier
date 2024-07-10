@@ -89,6 +89,52 @@
                             "save_other_choice": 0
                         }
                     ]
+                },
+                {
+                    "key": "field_668e2b0c7c5ab",
+                    "label": "Image(s) de fond",
+                    "name": "bg_group",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_668e2b4c7c5af",
+                            "label": "Coin(s)",
+                            "name": "position",
+                            "aria-label": "",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-left": "En haut à gauche",
+                                "top-right": "En haut à droite",
+                                "bottom-left": "En bas à gauche",
+                                "bottom-right": "En bas à droite"
+                            },
+                            "default_value": [],
+                            "return_format": "value",
+                            "allow_custom": 0,
+                            "layout": "horizontal",
+                            "toggle": 0,
+                            "save_custom": 0,
+                            "custom_choice_button_text": "Ajouter un nouveau choix"
+                        }
+                    ]
                 }
             ]
         }
@@ -111,5 +157,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677746777
+    "modified": 1720593606
 }

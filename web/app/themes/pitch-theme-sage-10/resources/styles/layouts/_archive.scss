@@ -1,0 +1,24 @@
+.archive,
+.search {
+  .wp-heading {
+    padding: 1.5rem 0;
+    border-bottom: solid 0.5px $grey-five;
+
+    .section-title {
+      font-family: $merriweather;
+      font-weight: 400;
+      font-size: 1.75rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  .card-podcast {
+    .wp-content {
+      gap: 0.75rem;
+    }
+
+    &:nth-child(odd) {
+      background-color: $grey-four;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.section {
+  &.title-iframe {
+    &.style-one {
+      .wp-content {
+        gap: 3.063rem;
+
+        .wp-heading {
+          gap: 0.281rem;
+        }
+      }
+    }
+  }
+}

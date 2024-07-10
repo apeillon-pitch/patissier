@@ -11,9 +11,11 @@
 
 @import 'layouts/header';
 @import 'layouts/footer';
+@import 'layouts/archive';
 
 @import 'sections/image-text';
 @import 'sections/title-text';
+@import 'sections/title-iframe';
 
 @import "components/buttons";
 @import "components/pagination";

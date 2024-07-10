@@ -42,3 +42,4 @@
   </div>
 </footer>
 @include('components.mobile-menu')
+<script src=“https://player.ausha.co/ausha-player.js”></script>

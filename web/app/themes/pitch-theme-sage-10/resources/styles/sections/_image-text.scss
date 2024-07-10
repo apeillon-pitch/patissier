@@ -5,7 +5,7 @@
         gap: 1.5rem;
 
         .wp-heading {
-          gap: 8px;
+          gap: 0.5rem;
         }
       }
 
@@ -33,6 +33,53 @@
 
       .wp-buttons {
         gap: 1.5rem;
+      }
+    }
+
+    &.style-two,
+    &.style-three {
+      .section-title {
+        font-family: $merriweather;
+        font-weight: 400;
+        line-height: 3.299rem;
+
+        span,
+        b,
+        strong {
+          font-family: $poppins;
+          font-weight: 700;
+          color: $pink-one;
+          text-transform: uppercase;
+          line-height: 3.938rem;
+        }
+      }
+    }
+
+    &.style-two {
+      .wp-heading {
+        margin-bottom: 0.75rem;
+      }
+
+      figure {
+        &.cover {
+          height: 318px;
+        }
+      }
+    }
+
+    &.style-three {
+      .wp-heading {
+        margin-bottom: 1.5rem;
+      }
+
+      .wp-images {
+        gap: 1.5rem;
+
+        figure {
+          &.cover {
+            height: 236px;
+          }
+        }
       }
     }
   }

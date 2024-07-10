@@ -7,6 +7,47 @@ body {
     position: relative;
     padding: 4.25rem 0;
 
+    &.top-left::before,
+    &.top-right::after,
+    &.bottom-left .inner-section::before,
+    &.bottom-right .inner-section::after {
+      display: block;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &.top-left {
+      &::before {
+        content: url("../../images/bg-top-left.svg");
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.top-right {
+      &::after {
+        content: url("../../images/bg-top-right.svg");
+        top: 0;
+        right: 0;
+      }
+    }
+
+    &.bottom-left .inner-section {
+      &::before {
+        content: url("../../images/bg-bottom-left.svg");
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &.bottom-right .inner-section {
+      &::after {
+        content: url("../../images/bg-bottom-right.svg");
+        bottom: 0;
+        right: 0;
+      }
+    }
+
     figure {
       &.cover {
         position: relative;
