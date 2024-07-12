@@ -12,16 +12,22 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/archive';
+@import 'layouts/singlular';
+@import 'layouts/recipe';
 
 @import 'sections/image-text';
-@import 'sections/title-text';
 @import 'sections/title-iframe';
+@import 'sections/title-recipe';
+@import 'sections/hero';
+@import 'sections/instagram';
 
 @import "components/buttons";
 @import "components/pagination";
 @import "components/titles";
 @import "components/forms";
 @import "components/slideshow";
+@import "components/cards";
+@import "components/widgets";
 @import "components/menu/desktop/nav";
 
 /** Menu mobile */

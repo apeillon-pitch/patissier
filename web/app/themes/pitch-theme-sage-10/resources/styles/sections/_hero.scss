@@ -1,0 +1,30 @@
+.section {
+  &.hero-mag {
+    .section-title {
+      font-family: $merriweather;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.25rem;
+
+      strong {
+        display: block;
+        font-family: $poppins;
+        font-size: 2.625rem;
+        line-height: 3.938rem;
+        margin: 6px 0 12px;
+      }
+    }
+
+    .mag {
+      height: 543px;
+    }
+
+    .wp-recipes {
+      margin-top: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

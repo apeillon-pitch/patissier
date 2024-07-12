@@ -1,0 +1,54 @@
+<div class="section hero-mag pb-0">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-7">
+        <div class="d-flex flex-column">
+          <h1 class="section-title">{!! $data['number'] !!} | {{ $data['date'] }}
+            <br> <strong>{!! $data['title'] !!}</strong>
+          </h1>
+          @if($data['introduction'])
+            {!! $data['introduction'] !!}
+          @endif
+          @if($data['recipes'])
+            <div class="row wp-recipes">
+              @foreach($data['recipes'] as $recipe)
+                @php $recipe = getRecipeById($recipe); @endphp
+                @if($recipe)
+                  <div class="col-12 col-lg-6">
+                    <a href="{{ $recipe['permalink'] }}" aria-label="{!! $recipe['title'] !!}" target="_self"
+                       class="card-recipe style-three">
+                      @if($recipe['thumbnail'])
+                        <figure class="cover mb-0">
+                          @if($recipe['tag'])
+                            <span class="tag">{!! $recipe['tag']->name !!}</span>
+                          @endif
+                          {!! wp_get_attachment_image($recipe['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
+                        </figure>
+                      @endif
+                      @if($recipe['title'])
+                        <h2 class="title">{!! $recipe['title'] !!}</h2>
+                      @endif
+                      @if($recipe['author']['name'])
+                        <div class="details">
+                          par {!! $recipe['author']['name'] !!}
+                        </div>
+                      @endif
+                    </a>
+                  </div>
+                @endif
+              @endforeach
+            </div>
+          @endif
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        @if($data['thumbnail'])
+          <figure class="cover mag mb-0">
+            {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
+          </figure>
+        @endif
+
+      </div>
+    </div>
+  </div>
+</div>

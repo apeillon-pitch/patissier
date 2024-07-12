@@ -1,7 +1,7 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
 <div id="section-{{ $row }}" class="section title-iframe style-one {{ $options['oclasses'] }}">
   <div class="inner-section">
-    <div class="container">
+    <div class="{{ is_singular('recipe') ? '' : 'container' }}">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-9 col-xxl-8">
           <div class="d-flex flex-column wp-content">
@@ -14,9 +14,7 @@
               @endif
             </div>
             @if($section['iframe'])
-              <div class="ratio ratio-16x9">
-                {!! $section['iframe'] !!}
-              </div>
+              {!! $section['iframe'] !!}
             @endif
           </div>
         </div>

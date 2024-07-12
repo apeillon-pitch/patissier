@@ -1,0 +1,109 @@
+.widget {
+  box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
+
+  .widget-title {
+    font-family: $merriweather;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $black-one;
+  }
+
+  &.widget-recipe-suggestion {
+    padding: 1.5rem;
+  }
+
+  &.widget-author {
+    padding: 1.5rem 0.75rem;
+
+    .wp-content {
+      gap: 0.75rem;
+
+      figure {
+        width: 84px;
+        min-width: 84px;
+        height: 84px;
+      }
+
+      .name,
+      .job {
+        color: $black-one;
+      }
+
+      .name {
+        font-family: $merriweather;
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-bottom: 0.25rem;
+      }
+
+      .job {
+        position: relative;
+        font-size: 0.75rem;
+        font-weight: 400;
+        padding-left: 1.25rem;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 6px;
+          width: 12px;
+          height: 1px;
+          background-color: #be9f8f;
+        }
+      }
+    }
+  }
+
+  &.widget-magazine {
+    padding: 1.5rem 0.75rem;
+
+    .wp-content {
+      gap: 0.75rem;
+
+      figure {
+        width: 88px;
+        min-width: 88px;
+        height: 116px;
+      }
+
+      .name {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: $black-one;
+        margin-bottom: 0.75rem;
+      }
+
+      a.btn {
+        font-size: 0.75rem;
+
+        &.btn-tertiary {
+          font-weight: 500;
+          text-transform: inherit;
+        }
+      }
+    }
+  }
+
+  &.widget-text {
+    padding: 1.5rem;
+
+    .wp-content {
+      gap: 1.5rem;
+
+      .title,
+      p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+      .title {
+        font-weight: 600;
+        color: $black-one;
+        text-transform: uppercase;
+        margin-bottom: 0.375rem;
+      }
+    }
+  }
+}

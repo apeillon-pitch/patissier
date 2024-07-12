@@ -36,25 +36,6 @@
       }
     }
 
-    &.style-two,
-    &.style-three {
-      .section-title {
-        font-family: $merriweather;
-        font-weight: 400;
-        line-height: 3.299rem;
-
-        span,
-        b,
-        strong {
-          font-family: $poppins;
-          font-weight: 700;
-          color: $pink-one;
-          text-transform: uppercase;
-          line-height: 3.938rem;
-        }
-      }
-    }
-
     &.style-two {
       .wp-heading {
         margin-bottom: 0.75rem;

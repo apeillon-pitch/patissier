@@ -18,9 +18,22 @@ const main = async (err) => {
     console.error(err);
   }
 
+  filterRecipes();
   setSelect2();
   dropdownMenu();
   getStickyMenu();
+
+  function filterRecipes()
+  {
+    const urlSelector = document.getElementById('mag-filter');
+
+    urlSelector.addEventListener('change', (event) => {
+      const selectedUrl = event.target.value;
+      if (selectedUrl) {
+        window.location.href = selectedUrl;
+      }
+    });
+  }
 
   function setSelect2() {
     $('.ginput_container_select select').select2({

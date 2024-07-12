@@ -1,0 +1,48 @@
+.section {
+  &.instagram {
+    .wp-heading {
+      margin-bottom: 3rem;
+
+      .section-title {
+        font-size: 3rem;
+        line-height: 3.771rem;
+        margin-bottom: 0.75rem;
+      }
+
+      a {
+        position: relative;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $black-one;
+        text-decoration: none;
+        padding-left: 2.25rem;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 9px;
+          width: 24px;
+          height: 1px;
+          background-color: #ceb7ab;
+        }
+      }
+    }
+
+    #sb_instagram {
+      #sbi_images {
+        gap: 1.5rem !important;
+
+        .sbi_item {
+          box-shadow: 0 4px 25px 0 rgb(0 0 0 / 15%);
+        }
+      }
+
+      #sbi_load,
+      .sb_instagram_header {
+        display: none;
+      }
+    }
+  }
+}

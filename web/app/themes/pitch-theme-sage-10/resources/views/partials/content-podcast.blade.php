@@ -1,8 +1,8 @@
 @php
-    $title = get_the_title();
-    $episod = get_field('episod');
-    $excerpt = get_field('excerpt');
-    $iframe = get_field('iframe');
+  $title = get_the_title();
+  $episod = get_field('episod');
+  $excerpt = get_field('excerpt');
+  $iframe = get_field('iframe')
 @endphp
 <div class="row justify-content-center">
   <div class="col-12 col-lg-9 col-xxl-8">

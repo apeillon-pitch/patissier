@@ -1,12 +1,12 @@
 <?php
 // Register Custom Post Type
-function podcast() {
+function magazine() {
 
     $labels = array(
-        'name'                  => _x( 'Podcasts', 'Post Type General Name', 'jdp' ),
-        'singular_name'         => _x( 'Podcast', 'Post Type Singular Name', 'jdp' ),
-        'menu_name'             => __( 'Podcasts', 'jdp' ),
-        'name_admin_bar'        => __( 'Podcasts', 'jdp' ),
+        'name'                  => _x( 'Magazines', 'Post Type General Name', 'jdp' ),
+        'singular_name'         => _x( 'Magazine', 'Post Type Singular Name', 'jdp' ),
+        'menu_name'             => __( 'Magazines', 'jdp' ),
+        'name_admin_bar'        => __( 'Magazines', 'jdp' ),
         'archives'              => __( 'Item Archives', 'jdp' ),
         'attributes'            => __( 'Item Attributes', 'jdp' ),
         'parent_item_colon'     => __( 'Parent Item:', 'jdp' ),
@@ -32,70 +32,96 @@ function podcast() {
         'filter_items_list'     => __( 'Filter items list', 'jdp' ),
     );
     $args = array(
-        'label'                 => __( 'Podcast', 'jdp' ),
-        'description'           => __( 'Podcasts', 'jdp' ),
+        'label'                 => __( 'Magazines', 'jdp' ),
+        'description'           => __( 'Magazines', 'jdp' ),
         'labels'                => $labels,
         'supports'              => array( 'title' ),
+        'taxonomies'            => array( 'post_tag' ),
         'hierarchical'          => false,
-        'public'                => false,
+        'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
         'menu_position'         => 5,
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
-        'has_archive'           => 'podcast',
+        'has_archive'           => false,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'rewrite'               => false,
         'capability_type'       => 'page',
     );
-    register_post_type( 'podcast', $args );
+    register_post_type( 'magazine', $args );
 
 }
-add_action( 'init', 'podcast', 0 );
+add_action( 'init', 'magazine', 0 );
 
-function getPodcasts($number)
+function getMagazines($number)
 {
     $args = array(
         'post_status' => 'publish',
-        'post_type' => 'podcast',
+        'post_type' => 'magazine',
         'posts_per_page' => $number,
         'orderby' => 'date',
         'order' => 'DESC',
     );
 
-    $data = getPodcastData($args);
+    $data = getMagazineData($args);
 
     wp_reset_query();
 
     return $data;
 }
 
-
-function getPodcastById($id)
+function getMagazineByCategory($id)
 {
     $args = array(
-        'post_type' => 'podcast',
+        'post_type' => 'magazine',
+        'posts_per_page' => 1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'magazine',
+                'field' => 'term_id',
+                'terms' => $id,
+            ),
+        ),
+    );
+
+    $magazine_data = getMagazineData($args);
+    $magazine = null;
+
+    if ($magazine_data) {
+        $magazine = $magazine_data[0];
+    }
+
+    wp_reset_query();
+
+    return $magazine;
+}
+
+function getMagazineById($id)
+{
+    $args = array(
+        'post_type' => 'magazine',
         'page_id' => $id,
         'orderby' => 'date',
         'order' => 'DESC',
         'posts_per_page' => 1,
     );
 
-    $podcast_data = getPodcastData($args);
-    $podcast = null;
+    $magazine_data = getMagazineData($args);
+    $magazine = null;
 
-    if ($podcast_data) {
-        $podcast = $podcast_data[0];
+    if ($magazine_data) {
+        $magazine = $magazine_data[0];
     }
 
     wp_reset_query();
 
-    return $podcast;
+    return $magazine;
 }
 
-function getPodcastData($args)
+function getMagazineData($args)
 {
     $query = new WP_Query($args);
     if ($query->have_posts()) {

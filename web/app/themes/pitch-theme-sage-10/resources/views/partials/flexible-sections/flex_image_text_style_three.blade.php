@@ -1,7 +1,7 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
 <div id="section-{{ $row }}" class="section image-text style-three {{ $options['oclasses'] }}">
   <div class="inner-section">
-    <div class="container">
+    <div class="{{ is_singular('recipe') ? '' : 'container' }}">
       <div class="row align-items-{{ $section['alignment'] }}">
         <div
           class="col-12 col-lg-6 {{ $section['position'] === 'left' ? 'order-2 offset-lg-1' : 'order-2 order-lg-1' }}">
@@ -11,7 +11,7 @@
                 @include('partials.template-parts.title', ['item' => $section['overtitle_group'], 'class' => 'overtitle'])
               @endif
               @if ($section['title_group']['title'])
-                @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title'])
+                @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
               @endif
             </div>
             @if($section['text'])
