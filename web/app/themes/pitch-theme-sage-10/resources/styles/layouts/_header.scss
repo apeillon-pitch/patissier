@@ -5,6 +5,44 @@ header {
   box-shadow: 0 6px 10px 0 rgb(0 0 0 / 5%);
   background-color: white;
 
+  .wp-top-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 36.39px;
+    color: white;
+    background-color: $grey-three;
+
+    @include media-breakpoint-down(lg) {
+      height: 58px;
+    }
+
+    button {
+      color: white;
+      border: 0;
+      padding: 0;
+      text-transform: uppercase;
+      background-color: transparent;
+    }
+
+    .wp-links-mobile {
+      gap: 1rem;
+    }
+
+    .wp-links-desktop {
+      gap: 1rem;
+      font-size: 0.75rem;
+
+      a {
+        color: white;
+
+        .fa-brands {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
   .wp-logos {
     padding: 1.5rem;
 
