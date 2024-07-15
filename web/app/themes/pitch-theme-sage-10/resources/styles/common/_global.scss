@@ -3,9 +3,14 @@ body {
   font-weight: 400;
   color: $grey-one;
 
+  main {
+    padding-top: 232px;
+  }
+
   .section {
     position: relative;
     padding: 4.25rem 0;
+    overflow: hidden;
 
     &.bg-grey {
       background-color: $grey-four;

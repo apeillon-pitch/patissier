@@ -1,9 +1,12 @@
 header {
-  position: sticky;
+  position: absolute;
   z-index: 999;
+  width: 100%;
   top: 0;
+  left: 0;
   box-shadow: 0 6px 10px 0 rgb(0 0 0 / 5%);
   background-color: white;
+  transition: all ease 0.6s;
 
   .wp-top-bar {
     display: flex;
@@ -84,8 +87,26 @@ header {
   }
 }
 
-.nav-is-stuck {
-  header {
-    transition: all 0.3s ease-in-out;
+.nav-hidden {
+  #o-wrapper {
+    transform: translateY(-100%);
+  }
+}
+
+.nav-visible {
+  #o-wrapper {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all ease 0.6s;
+    transform: translateY(0);
+  }
+
+  &.nav-transparent {
+    #o-wrapper {
+      background-color: transparent;
+    }
   }
 }

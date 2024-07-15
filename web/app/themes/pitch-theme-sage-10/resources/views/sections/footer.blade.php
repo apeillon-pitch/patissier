@@ -42,7 +42,7 @@
   </div>
 </footer>
 @include('components.mobile-menu')
-<script src=“https://player.ausha.co/ausha-player.js”></script>
+<script defer src="https://player.ausha.co/ausha-player.js"></script>
 <!-- Modal -->
 <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
   <div class="modal-dialog">

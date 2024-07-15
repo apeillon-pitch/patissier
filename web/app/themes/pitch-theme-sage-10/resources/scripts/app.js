@@ -27,12 +27,14 @@ const main = async (err) => {
   {
     const urlSelector = document.getElementById('mag-filter');
 
-    urlSelector.addEventListener('change', (event) => {
-      const selectedUrl = event.target.value;
-      if (selectedUrl) {
-        window.location.href = selectedUrl;
-      }
-    });
+    if(urlSelector) {
+      urlSelector.addEventListener('change', (event) => {
+        const selectedUrl = event.target.value;
+        if (selectedUrl) {
+          window.location.href = selectedUrl;
+        }
+      });
+    }
   }
 
   function setSelect2() {
@@ -71,28 +73,37 @@ const main = async (err) => {
   }
 
   function getStickyMenu() {
-    var w = window;
-    var d = document;
-    var el_html = d.documentElement;
-    var el_body = d.body;
+    var el_html = document.documentElement;
+    var el_body = document.body;
+    var lastScrollTop = 0; // Stocke la dernière position de défilement
 
-    function menuIsStuck() {
-      var wScrollTop = w.pageYOffset || el_body.scrollTop;
-      var isStuck = el_html.classList.contains('nav-is-stuck');
+    function onScrolling() {
+      var wScrollTop = window.pageYOffset || el_body.scrollTop;
 
-      if (wScrollTop > 0 && !isStuck) {
-        el_html.classList.add('nav-is-stuck');
-        el_body.style.paddingTop = '0';
+      // Si tout en haut de la page, ajouter 'nav-transparent'
+      if (wScrollTop <= 0) {
+        el_html.classList.add('nav-transparent');
+      } else {
+        el_html.classList.remove('nav-transparent');
       }
 
-      if (wScrollTop < 2 && isStuck) {
-        el_html.classList.remove('nav-is-stuck');
-        el_body.style.paddingTop = '0';
+      // Défilement vers le bas
+      if (wScrollTop > lastScrollTop) {
+        el_html.classList.remove('nav-visible');
+        el_html.classList.add('nav-hidden');
       }
+      // Défilement vers le haut
+      else if (wScrollTop < lastScrollTop) {
+        el_html.classList.remove('nav-hidden');
+        el_html.classList.add('nav-visible');
+      }
+
+      // Mettre à jour lastScrollTop pour la prochaine invocation
+      lastScrollTop = wScrollTop <= 0 ? 0 : wScrollTop; // Pour éviter les valeurs négatives
     }
 
-    w.addEventListener('scroll', function() {
-      w.requestAnimationFrame(menuIsStuck);
+    window.addEventListener('scroll', function () {
+      window.requestAnimationFrame(onScrolling);
     });
   }
 };
