@@ -1692,7 +1692,219 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_66951eb6796a7",
+                            "label": "Source",
+                            "name": "source",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "last": "Le dernier magazine",
+                                "manual": "Choisir le magazine"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_66951ed7796a8",
+                            "label": "Magazine",
+                            "name": "magazine",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66951eb6796a7",
+                                        "operator": "==",
+                                        "value": "manual"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "magazine"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "id",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_66952468293f3",
+                            "label": "Position du médias",
+                            "name": "position",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "right": "A droite du texte",
+                                "left": "A gauche du texte"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_6694e8c1edd3b",
+                            "label": "Options",
+                            "name": "options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_640060d625a21"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_669520850b82d": {
+                    "key": "layout_669520850b82d",
+                    "name": "flex_recipe_style_one",
+                    "label": "Recette",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_669520850b833",
+                            "label": "Source",
+                            "name": "source",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "last": "La dernière recette",
+                                "last-month": "La dernière recette du mois",
+                                "last-step-by-step": "La dernière recette pas à pas",
+                                "manual": "Choisir la recette"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_669520850b834",
+                            "label": "Recette",
+                            "name": "recipe",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_669520850b833",
+                                        "operator": "==",
+                                        "value": "manual"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "recipe"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "id",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_66952447293f2",
+                            "label": "Position du médias",
+                            "name": "position",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "right": "A droite du texte",
+                                "left": "A gauche du texte"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_669520850b835",
                             "label": "Options",
                             "name": "options",
                             "aria-label": "",
@@ -2445,5 +2657,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721035009
+    "modified": 1721050233
 }

@@ -109,12 +109,7 @@ function getMagazineById($id)
         'posts_per_page' => 1,
     );
 
-    $magazine_data = getMagazineData($args);
-    $magazine = null;
-
-    if ($magazine_data) {
-        $magazine = $magazine_data[0];
-    }
+    $magazine = getMagazineData($args);
 
     wp_reset_query();
 

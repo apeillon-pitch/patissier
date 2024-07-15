@@ -2,13 +2,21 @@
   $options = getSectionOptions($section['section_options_group']);
   $magazines = getMagazines(1);
 @endphp
+@switch($section['source'])
+  @case('last')
+    @php $magazines = getMagazines(1); @endphp
+  @break
+  @case('manual')
+    @php $magazines = getMagazineById($section['magazine']); @endphp
+    @break
+@endswitch
 @if($magazines)
   @foreach($magazines as $magazine )
     <div id="section-{{ $row }}" class="section image-text style-one {{ $options['oclasses'] }}">
       <div class="inner-section">
         <div class="{{ is_singular('recipe') ? '' : 'container' }}">
           <div class="row align-items-center justify-content-between">
-            <div class="col-12 col-lg-5 order-2 order-lg-1">
+            <div class="col-12 col-lg-5 {{ $section['position'] === 'left' ? 'order-2' : 'order-2 order-lg-1' }}">
               <div class="d-flex flex-column wp-text">
                 <div class="d-flex flex-column wp-heading">
                   <span class="overtitle">#{!! $magazine['magazine']->name !!} | {!! $magazine['date'] !!}</span>
@@ -29,7 +37,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 order-1 order-lg-2">
+            <div class="col-12 col-lg-6 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
               @if($magazine['thumbnail'] && empty($magazine['recipes']))
                 <figure class="cover mb-0 primary style-one">
                   {!! wp_get_attachment_image($magazine['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}

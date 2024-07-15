@@ -112,6 +112,23 @@ function getRecipes($number)
     return $data;
 }
 
+function getLastRecipeByTag( $tag)
+{
+    $args = array(
+        'post_type' => 'recipe',
+        'orderby' => 'date',
+        'order' => 'ASC',
+        'posts_per_page' => 1,
+        'tag_id' => $tag
+    );
+
+    $data = getRecipeData($args);
+
+    wp_reset_query();
+
+    return $data;
+}
+
 
 function getRecipeById($id)
 {
