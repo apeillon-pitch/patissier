@@ -25,16 +25,12 @@ const main = async (err) => {
 
   function filterRecipes()
   {
-    const urlSelector = document.getElementById('mag-filter');
-
-    if(urlSelector) {
-      urlSelector.addEventListener('change', (event) => {
-        const selectedUrl = event.target.value;
-        if (selectedUrl) {
-          window.location.href = selectedUrl;
-        }
-      });
-    }
+    $('#mag-filter').on('change', function() {
+      const selectedUrl = $(this).val();
+      if (selectedUrl) {
+        window.location.href = selectedUrl;
+      }
+    });
   }
 
   function setSelect2() {

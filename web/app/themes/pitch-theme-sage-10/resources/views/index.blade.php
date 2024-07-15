@@ -6,7 +6,7 @@
     @php $data = get_field('archive_podcast', 'options'); @endphp
   @elseif(is_post_type_archive('recipe'))
     @php $data = get_field('archive_recipe', 'options'); @endphp
-  @elseif(is_tax('magazine'))
+  @elseif(is_tax('taxo-magazine'))
     @php $data = get_field('archive_magazine', 'options'); @endphp
   @else
     @php $data = get_field('archive_magazine', 'options'); @endphp
@@ -18,7 +18,7 @@
         <h1 class="section-title">{!! $data['title'] !!}</h1>
         @if(is_post_type_archive('recipe'))
           <div class="d-flex flex-row justify-content-end">
-            @php $terms = get_terms('magazine') @endphp
+            @php $terms = get_terms('taxo-magazine') @endphp
             <select id="mag-filter">
               <option value="" disabled selected>Tous les numéros</option>
               @foreach($terms as $term)
@@ -40,8 +40,8 @@
               {!! $data['button']['title'] !!}
             </a>
           @endif
-        @elseif(is_tax('magazine'))
-          @php $terms = get_terms('magazine') @endphp
+        @elseif(is_tax('taxo-magazine'))
+          @php $terms = get_terms('taxo-magazine') @endphp
           <select id="mag-filter">
             <option value="" disabled>Tous les numéros</option>
             @foreach($terms as $term)
@@ -76,14 +76,16 @@
         </div>
       </div>
     @endwhile
-  @elseif(is_post_type_archive('recipe') or is_tax('magazine'))
+  @elseif(is_post_type_archive('recipe') or is_tax('taxo-magazine'))
     <div class="section">
       <div class="container">
         @php
           $posts = [];
           while (have_posts()) {
             the_post();
-            $posts[] = get_post();
+            if(get_post_type() != 'magazine') {
+                $posts[] = get_post();
+            }
           }
           $total_posts = count($posts);
         @endphp
@@ -91,13 +93,12 @@
           <div class="col-12 col-lg-5">
             @php
               $post = $posts[0];
-              setup_postdata($post);
               $title = get_the_title($post->ID);
               $permalink = get_the_permalink($post->ID);
             @endphp
             <div class="col-12 h-100 mb-4">
               <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two main h-100">
-                @includeFirst(['partials.content-' . get_post_type(), 'partials.content'], ['id' => $post->ID])
+                @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
               </a>
             </div>
           </div>
@@ -108,16 +109,13 @@
                 $title = get_the_title($post->ID);
                 $permalink = get_the_permalink($post->ID);
               @endphp
-
               @foreach ($right_side_posts as $post)
-                @php setup_postdata($post); @endphp
                 <div class="col-4 mb-4">
                   <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two">
-                    @includeFirst(['partials.content-' . get_post_type(), 'partials.content'], ['id' => $post->ID])
+                    @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
                   </a>
                 </div>
               @endforeach
-              @php wp_reset_postdata(); @endphp
             </div>
           </div>
         </div>
@@ -128,12 +126,10 @@
             $permalink = get_the_permalink($post->ID);
           @endphp
           @foreach ($right_side_posts as $post)
-            @php setup_postdata($post); @endphp
             <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two">
-              @includeFirst(['partials.content-' . get_post_type(), 'partials.content'], ['id' => $post->ID])
+              @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
             </a>
           @endforeach
-          @php wp_reset_postdata(); @endphp
         </div>
       </div>
     </div>

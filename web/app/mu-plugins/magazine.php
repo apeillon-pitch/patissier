@@ -31,6 +31,12 @@ function magazine() {
         'items_list_navigation' => __( 'Items list navigation', 'jdp' ),
         'filter_items_list'     => __( 'Filter items list', 'jdp' ),
     );
+    $rewrite = array(
+        'slug'                  => 'magazine',
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
     $args = array(
         'label'                 => __( 'Magazines', 'jdp' ),
         'description'           => __( 'Magazines', 'jdp' ),
@@ -48,7 +54,7 @@ function magazine() {
         'has_archive'           => false,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
-        'rewrite'               => false,
+        'rewrite'               => $rewrite,
         'capability_type'       => 'page',
     );
     register_post_type( 'magazine', $args );
@@ -123,7 +129,7 @@ function getMagazineData($args)
         while ($query->have_posts()) {
             $query->the_post();
             $id = get_the_ID();
-            $title = get_the_title();
+            $title = get_field('title');
             $permalink = get_the_permalink();
             $thumbnail = get_field('thumbnail');
             $excerpt = get_field('excerpt');

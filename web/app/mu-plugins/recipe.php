@@ -31,6 +31,12 @@ function recipe() {
         'items_list_navigation' => __( 'Items list navigation', 'jdp' ),
         'filter_items_list'     => __( 'Filter items list', 'jdp' ),
     );
+    $rewite = array(
+        'slug'                  => 'recette',
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
     $args = array(
         'label'                 => __( 'Recettes', 'jdp' ),
         'description'           => __( 'Recettes', 'jdp' ),
@@ -38,7 +44,7 @@ function recipe() {
         'supports'              => array( 'title' ),
         'taxonomies'            => array( 'post_tag' ),
         'hierarchical'          => false,
-        'public'                => false,
+        'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
         'menu_position'         => 5,
@@ -48,7 +54,7 @@ function recipe() {
         'has_archive'           => 'recettes',
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
-        'rewrite'               => false,
+        'rewrite'               => $rewite,
         'capability_type'       => 'page',
     );
     register_post_type( 'recipe', $args );
@@ -81,6 +87,11 @@ function magazineTaxonomy() {
         'items_list'                 => __( 'Items list', 'jdp' ),
         'items_list_navigation'      => __( 'Items list navigation', 'jdp' ),
     );
+    $rewrite = array(
+        'slug'                       => 'recettes',
+        'with_front'                 => true,
+        'hierarchical'               => false,
+    );
     $args = array(
         'labels'                     => $labels,
         'hierarchical'               => false,
@@ -89,8 +100,9 @@ function magazineTaxonomy() {
         'show_admin_column'          => true,
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
     );
-    register_taxonomy( 'magazine', array( 'recipe', 'magazine' ), $args );
+    register_taxonomy( 'taxo-magazine', array( 'recipe', 'magazine' ), $args );
 
 }
 add_action( 'init', 'magazineTaxonomy', 0 );

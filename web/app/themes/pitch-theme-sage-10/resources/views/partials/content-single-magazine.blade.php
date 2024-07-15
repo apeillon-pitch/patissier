@@ -8,7 +8,7 @@
         @foreach($mags as $mag)
           <option
             value="{{ $mag['permalink'] }}" {{ $id === $mag['id'] ? 'selected' : '' }}>
-            #{!! $mag['title'] !!} | {!! $mag['date_short'] !!}</option>
+            #{!! $mag['magazine']->name !!} | {!! $mag['date_short'] !!}</option>
         @endforeach
       </select>
     </div>

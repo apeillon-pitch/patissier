@@ -86,7 +86,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "magazine",
+            "taxonomy": "taxo-magazine",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
@@ -438,5 +438,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720767346
+    "modified": 1721054190
 }
