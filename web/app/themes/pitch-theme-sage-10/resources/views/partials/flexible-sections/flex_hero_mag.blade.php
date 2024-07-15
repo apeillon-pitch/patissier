@@ -3,7 +3,7 @@
     <div class="row justify-content-between">
       <div class="col-12 col-lg-7">
         <div class="d-flex flex-column">
-          <h1 class="section-title">{!! $data['number'] !!} | {{ $data['date'] }}
+          <h1 class="section-title">#{!! $data['number'] !!} | {{ $data['date'] }}
             <br> <strong>{!! $data['title'] !!}</strong>
           </h1>
           @if($data['introduction'])
@@ -47,7 +47,14 @@
             {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
           </figure>
         @endif
-
+        <div class="d-flex flex-row wp-buttons">
+          @if($global['data']['link_subscribe'])
+            @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
+          @endif
+          @if($global['data']['link_discover_mag'])
+            @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+          @endif
+        </div>
       </div>
     </div>
   </div>

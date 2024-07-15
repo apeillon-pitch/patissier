@@ -1,0 +1,30 @@
+body {
+  &.single-recipe {
+    .section {
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 4.5rem;
+      }
+
+      .section {
+        position: relative;
+        padding: 1.875rem 0;
+      }
+    }
+  }
+
+  &.single-magazine {
+    .wp-heading-single {
+      padding: 1.5rem 0;
+      border-bottom: solid 0.5px $grey-five;
+
+      .section-title {
+        font-family: $merriweather;
+        font-weight: 400;
+        font-size: 1.75rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}

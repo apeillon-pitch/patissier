@@ -31,7 +31,7 @@ class Magazine extends Composer
     {
         $data = [
             'number' => get_the_title(),
-            'date' => get_field('date'),
+            'date' => get_field('date_string'),
             'title' => get_field('title'),
             'thumbnail' => get_field('thumbnail'),
             'excerpt' => get_field('excerpt'),

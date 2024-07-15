@@ -15,6 +15,10 @@
       }
     }
 
+    figure {
+      box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
+    }
+
     .mag {
       height: 543px;
     }
@@ -25,6 +29,11 @@
 
     a {
       text-decoration: none;
+    }
+
+    .wp-buttons {
+      margin-top: 1.5rem;
+      gap: 1.5rem;
     }
   }
 }

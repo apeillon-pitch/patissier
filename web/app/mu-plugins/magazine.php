@@ -122,16 +122,22 @@ function getMagazineData($args)
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            $title = get_field('title');
+            $id = get_the_ID();
+            $title = get_the_title();
+            $permalink = get_the_permalink();
             $thumbnail = get_field('thumbnail');
             $excerpt = get_field('excerpt');
+            $date_short = get_field('date');
             $date = get_field('date_string');
             $magazine = get_field('magazine');
             $recipes = get_field('thumbnails_recipes');
             $data[] = array(
+                'id' => $id,
                 'title' => $title,
                 'thumbnail' => $thumbnail,
+                'permalink' => $permalink,
                 'excerpt' => $excerpt,
+                'date_short' => $date_short,
                 'date' => $date,
                 'magazine' => $magazine,
                 'recipes' => $recipes
