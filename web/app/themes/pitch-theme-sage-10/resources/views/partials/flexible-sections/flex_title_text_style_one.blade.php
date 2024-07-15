@@ -2,7 +2,7 @@
 <div id="section-{{ $row }}" class="section title-text style-one {{ $options['oclasses'] }}">
   <div class="inner-section">
     <div class="{{ is_singular('recipe') ? '' : 'container' }}">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-12 col-lg-3">
           @if ($section['title_group']['title'])
             @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])

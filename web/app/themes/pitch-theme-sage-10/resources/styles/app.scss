@@ -18,8 +18,10 @@
 @import 'sections/image-text';
 @import 'sections/title-iframe';
 @import 'sections/title-recipe';
+@import 'sections/title-text';
 @import 'sections/hero';
 @import 'sections/instagram';
+@import 'sections/contact';
 
 @import "components/buttons";
 @import "components/pagination";
@@ -28,6 +30,7 @@
 @import "components/slideshow";
 @import "components/cards";
 @import "components/widgets";
+@import "components/accordion";
 @import "components/menu/desktop/nav";
 
 /** Menu mobile */

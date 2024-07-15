@@ -1,0 +1,28 @@
+.section {
+  &.title-text {
+    &.style-two {
+      .wp-content {
+        gap: 1.5rem;
+
+        .wp-heading {
+          gap: 0.5rem;
+        }
+
+        .wp-text {
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-family: $merriweather;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $black-one;
+            line-height: 1.375rem;
+            margin-bottom: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

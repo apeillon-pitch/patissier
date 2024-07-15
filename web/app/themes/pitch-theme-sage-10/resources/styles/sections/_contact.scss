@@ -1,0 +1,34 @@
+.section {
+  &.contact {
+    .wp-items {
+      gap: 12px;
+
+      .wp-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #dcdcdc;
+
+        .section-title {
+          font-size: 1.75rem;
+          line-height: 2.2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .overtitle {
+          color: $pink-one;
+          text-transform: uppercase;
+          margin-bottom: 0.375rem;
+        }
+
+        .wp-list {
+          gap: 0.375rem;
+          font-size: 0.875rem;
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

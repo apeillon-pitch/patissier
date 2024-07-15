@@ -106,4 +106,14 @@
       }
     }
   }
+
+  &.widget-social {
+    padding: 1.5rem;
+
+    a {
+      font-size: 0.875rem;
+      color: $black-one;
+      text-decoration: none;
+    }
+  }
 }

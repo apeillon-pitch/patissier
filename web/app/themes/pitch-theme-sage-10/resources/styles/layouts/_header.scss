@@ -19,10 +19,27 @@ header {
       }
 
       .wp-widget {
+        color: $black-one;
         gap: 0.938rem;
 
-        img {
-          max-height: 100px;
+        figure {
+          position: relative;
+          overflow: hidden;
+          width: 76px;
+          height: 100px;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-height: inherit;
+            max-width: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
     }
