@@ -1,23 +1,47 @@
-.slick-track {
-  display: flex !important;
+form {
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="tel"] {
+      font-size: 0.75rem !important;
+      border-radius: $border-radius !important;
+    }
+
+    &[type="submit"] {
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      color: $black-one !important;
+      text-transform: uppercase !important;
+      border-radius: $border-radius !important;
+      background-color: white !important;
+    }
+  }
+
+  .gfield_required_text {
+    display: none !important;
+  }
+
+  .ginput_container_consent {
+    .gfield_consent_label {
+      font-size: 0.625rem;
+      color: white;
+    }
+  }
 }
 
-.slick-slide {
-  height: inherit !important;
-}
+.select2-container--default {
+  min-width: 170px;
 
-.slick-dotted.slick-slider {
-  margin-bottom: 0;
-}
+  .select2-selection--single {
+    height: 37px;
+    font-size: 0.75rem;
 
-.slick-dots li:only-child {
-  display: none !important;
-}
+    .select2-selection__rendered {
+      padding-top: 5px;
+    }
 
-.slideshow:not(.slick-initialized) {
-  visibility: hidden;
-}
-
-.slideshow.slick-initialized {
-  visibility: visible;
+    .select2-selection__arrow {
+      top: 7px;
+    }
+  }
 }

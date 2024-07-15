@@ -28,6 +28,56 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6694eb7ca74b2",
+            "label": "Images recettes à la Une",
+            "name": "thumbnails_recipes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 2,
+            "collapsed": "",
+            "button_label": "Ajouter un élément",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6694ebb7a74b3",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6694eb7ca74b2"
+                }
+            ]
+        },
+        {
             "key": "field_668fcade1d0d7",
             "label": "Titre",
             "name": "title",
@@ -64,6 +114,26 @@
             "display_format": "d\/m\/Y",
             "return_format": "F Yd\/m\/Y",
             "first_day": 1
+        },
+        {
+            "key": "field_66951cf5059a2",
+            "label": "Date format libre",
+            "name": "date_string",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "20 mai - 20 juin 2024",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_668fca69e5ad5",
@@ -193,5 +263,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720702153
+    "modified": 1721048358
 }

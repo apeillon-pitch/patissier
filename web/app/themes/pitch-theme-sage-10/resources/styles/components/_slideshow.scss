@@ -5,3 +5,19 @@
 .slick-slide {
   height: inherit !important;
 }
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots li:only-child {
+  display: none !important;
+}
+
+.slideshow:not(.slick-initialized) {
+  visibility: hidden;
+}
+
+.slideshow.slick-initialized {
+  visibility: visible;
+}

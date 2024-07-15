@@ -30,6 +30,7 @@ class App extends Composer
             'footer' => $this->footerData(),
             'mainMenu' => $this->mainMenu(),
             'sectionData' => $this->sectionData(),
+            'global' => $this->globalData(),
         ];
     }
 
@@ -65,6 +66,20 @@ class App extends Composer
     public function footerData()
     {
         $data = get_field('footer_group', 'options');
+        $data = array(
+            'data' => $data,
+        );
+        return $data;
+    }
+
+    /**
+     * Header
+     *
+     * @return array
+     */
+    public function globalData()
+    {
+        $data = get_field('general_group', 'options');
         $data = array(
             'data' => $data,
         );

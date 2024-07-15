@@ -127,13 +127,19 @@ function getMagazineData($args)
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            $title = get_the_title();
+            $title = get_field('title');
             $thumbnail = get_field('thumbnail');
             $excerpt = get_field('excerpt');
+            $date = get_field('date_string');
+            $magazine = get_field('magazine');
+            $recipes = get_field('thumbnails_recipes');
             $data[] = array(
                 'title' => $title,
                 'thumbnail' => $thumbnail,
                 'excerpt' => $excerpt,
+                'date' => $date,
+                'magazine' => $magazine,
+                'recipes' => $recipes
             );
         }
         wp_reset_postdata();

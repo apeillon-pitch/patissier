@@ -1685,6 +1685,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6694e8c1edd2a": {
+                    "key": "layout_6694e8c1edd2a",
+                    "name": "flex_magazine_style_one",
+                    "label": "Magazine",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6694e8c1edd3b",
+                            "label": "Options",
+                            "name": "options",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_640060d625a21"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_668fe5539925e": {
                     "key": "layout_668fe5539925e",
                     "name": "flex_recipe_suggestion_style_one",
@@ -2413,5 +2445,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721026584
+    "modified": 1721035009
 }
