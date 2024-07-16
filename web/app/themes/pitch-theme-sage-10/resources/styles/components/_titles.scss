@@ -48,6 +48,11 @@
   font-size: 2.625rem;
   line-height: 3.938rem;
 
+  @include media-breakpoint-down(sm) {
+    font-size: 1.875rem;
+    line-height: 2.813rem;
+  }
+
   &.style-two {
     font-family: $merriweather;
     font-weight: 400;

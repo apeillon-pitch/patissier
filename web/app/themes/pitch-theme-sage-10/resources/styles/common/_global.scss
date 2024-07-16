@@ -5,12 +5,20 @@ body {
 
   main {
     padding-top: 232px;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 186px;
+    }
   }
 
   .section {
     position: relative;
     padding: 4.25rem 0;
     overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+      padding: 3rem 0;
+    }
 
     &.bg-grey {
       background-color: $grey-four;

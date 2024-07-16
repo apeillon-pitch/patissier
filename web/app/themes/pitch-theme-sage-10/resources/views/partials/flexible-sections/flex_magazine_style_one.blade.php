@@ -37,7 +37,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
               @if($magazine['thumbnail'] && empty($magazine['recipes']))
                 <figure class="cover mb-0 primary style-one">
                   {!! wp_get_attachment_image($magazine['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
