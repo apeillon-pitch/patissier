@@ -110,7 +110,7 @@
                 $permalink = get_the_permalink($post->ID);
               @endphp
               @foreach ($right_side_posts as $post)
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                   <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two">
                     @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
                   </a>

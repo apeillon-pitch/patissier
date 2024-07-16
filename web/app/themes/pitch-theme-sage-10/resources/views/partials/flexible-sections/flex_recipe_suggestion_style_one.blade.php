@@ -21,7 +21,7 @@
             @if($section['source'] == 'manual')
               @php $post = getRecipeById($item->id); $item = $post['0'];  @endphp
             @endif
-            <div class="col-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
               <a href="{{ $item['permalink'] }}" aria-label="{!! $item['title'] !!}" target="_self"
                  class="card-recipe style-one">
                 @if($item['thumbnail'])

@@ -14,7 +14,7 @@
               @foreach($data['recipes'] as $recipe)
                 @php $recipe = getRecipeById($recipe); @endphp
                 @if($recipe)
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                     <a href="{{ $recipe['permalink'] }}" aria-label="{!! $recipe['title'] !!}" target="_self"
                        class="card-recipe style-three">
                       @if($recipe['thumbnail'])
@@ -41,7 +41,7 @@
           @endif
         </div>
       </div>
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
         @if($data['thumbnail'])
           <figure class="cover mag mb-0">
             {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
