@@ -29,7 +29,7 @@
           </div>
         </div>
         <div
-          class="col-12 col-lg-5 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2 offset-lg-1' }}">
+          class="col-12 col-lg-5 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2 offset-lg-1' }}">
           @if($section['image_repeater'])
             <div class="d-flex flex-column wp-images">
               @foreach($section['image_repeater'] as $item)
