@@ -32,6 +32,10 @@
       }
 
       .wp-thumbnails {
+        @include media-breakpoint-down(sm) {
+          --bs-gutter-y: 1.5rem;
+        }
+
         figure {
           height: 130px;
         }
