@@ -1,5 +1,5 @@
 header {
-  position: absolute;
+  position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -98,6 +98,10 @@ header {
 .nav-hidden {
   #o-wrapper {
     transform: translateY(-100%);
+
+    @include media-breakpoint-down(lg) {
+      transform: inherit;
+    }
   }
 }
 
@@ -110,11 +114,15 @@ header {
     right: 0;
     transition: all ease 0.6s;
     transform: translateY(0);
+
+    @include media-breakpoint-down(lg) {
+      transform: inherit;
+    }
   }
 
   &.nav-transparent {
     #o-wrapper {
-      background-color: transparent;
+      background-color: white;
     }
   }
 }

@@ -1,14 +1,6 @@
 <nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
   <div class="container">
-    <div class="d-flex flex-row justify-content-between align-items-center">
-      @if ($header['data'])
-        <a href="{{ home_url() }}" aria-label="Accueil">
-          <img src="{{ $header['data']['logo']['url'] }}"
-               alt="{!! $header['data']['logo']['alt'] !!}"
-               height="36px"
-               width="auto">
-        </a>
-      @endif
+   <div class="d-flex flex-row justify-content-end align-items-center mt-4">
       <button title="Fermer le menu" class="c-menu__close">
         <i class="fa-light fa-xmark"></i>
       </button>
