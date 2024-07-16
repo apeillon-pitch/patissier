@@ -1,6 +1,6 @@
 <footer class="content-info position-relative">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-12 col-lg-4">
         @if ($footer['data']['logo'])
           <a href="{{ home_url() }}" aria-label="Accueil">
@@ -28,11 +28,11 @@
           </div>
         @endif
       </div>
-      <div class="col-12 col-lg-3">
+      <div class="col-9 col-lg-3">
         @if($footer['data']['widget_newsletter']['fom_id'])
           <div class="d-flex flex-column wp-block newsletter">
             @if($footer['data']['widget_newsletter']['title'])
-              <span class="title">{!! $footer['data']['widget_newsletter']['title'] !!}</span>
+              <span class="title text-center text-lg-start">{!! $footer['data']['widget_newsletter']['title'] !!}</span>
             @endif
             {!! gravity_form( $footer['data']['widget_newsletter']['fom_id'], false, false, false, '', false ) !!}
           </div>
