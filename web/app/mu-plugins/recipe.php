@@ -176,6 +176,7 @@ function getRecipeData($args)
             $author = get_field('author_group');
             $excerpt = get_field('excerpt');
             $tag = get_field('tag');
+            $thumbnail_repeater = get_field('thumbnail_repeater');
             $data[] = array(
                 'title' => $title,
                 'thumbnail' => $thumbnail,
@@ -183,6 +184,7 @@ function getRecipeData($args)
                 'permalink' => $permalink,
                 'author' => $author,
                 'tag' => $tag,
+                'thumbnail_repeater' => $thumbnail_repeater
             );
         }
         wp_reset_postdata();

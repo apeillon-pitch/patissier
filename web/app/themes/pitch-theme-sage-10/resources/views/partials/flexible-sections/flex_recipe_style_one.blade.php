@@ -35,10 +35,26 @@
                     {!! $recipe['excerpt'] !!}
                   </div>
                 @endif
+                @if($recipe['tag']->term_id === 4)
+                  @if($recipe['thumbnail_repeater'])
+                    <div class="row wp-thumbnails">
+                      @foreach($recipe['thumbnail_repeater'] as $item)
+                        <div class="col-6 col-md-4">
+                          @if($item['image'])
+                            <figure class="cover mb-0">
+                              {!! wp_get_attachment_image($item['image']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
+                            </figure>
+                          @endif
+                        </div>
+                      @endforeach
+                    </div>
+                  @endif
+                @endif
                 <div class="d-flex flex-row wp-buttons">
                   @if($recipe['permalink'])
-                    @if($recipe['tag']->id === 4)
-                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Voir le pas à pas">Voir le pas à pas</a>
+                    @if($recipe['tag']->term_id === 4)
+                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Voir le pas à pas">Voir
+                        le pas à pas</a>
                     @else
                       <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Découvrir la recette">Découvrir
                         la recette</a>
@@ -47,7 +63,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
+            <div
+              class="col-12 col-lg-6 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
               @if($recipe['thumbnail'])
                 <figure class="cover mb-0 primary style-one">
                   {!! wp_get_attachment_image($recipe['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
