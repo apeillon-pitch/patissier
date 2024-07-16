@@ -39,7 +39,7 @@
                   @if($recipe['thumbnail_repeater'])
                     <div class="row wp-thumbnails">
                       @foreach($recipe['thumbnail_repeater'] as $item)
-                        <div class="col-6 col-md-4">
+                        <div class="col-6 col-sm-4">
                           @if($item['image'])
                             <figure class="cover mb-0">
                               {!! wp_get_attachment_image($item['image']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
