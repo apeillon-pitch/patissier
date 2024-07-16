@@ -3,10 +3,19 @@
     .wp-heading {
       margin-bottom: 3rem;
 
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 1.5rem;
+      }
+
       .section-title {
         font-size: 3rem;
         line-height: 3.771rem;
         margin-bottom: 0.75rem;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 1.875rem;
+          line-height: 2.813rem;
+        }
       }
 
       a {

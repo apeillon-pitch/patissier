@@ -13,7 +13,7 @@
           <div class="row wp-block menu">
             @foreach($footer['data']['menu_group']['col_repeater'] as $col)
               <div class="col-12 col-lg-6">
-                <div class="d-flex flex-column wp-menu">
+                <div class="d-flex flex-column wp-menu text-center text-lg-start">
                   @if($col['title'])
                     <span class="title">{!! $col['title'] !!}</span>
                   @endif
