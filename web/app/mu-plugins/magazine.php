@@ -155,8 +155,6 @@ function getMagazineData($args)
     }
 }
 
-add_action('save_post_magazine', 'update_menu_item_url_with_latest_magazine', 10, 3);
-
 add_action('save_post_magazine', 'update_latest_magazine_menu_item', 10, 3);
 
 function update_latest_magazine_menu_item($post_id, $post, $update) {
