@@ -157,12 +157,15 @@ function getMagazineData($args)
 
 add_action('save_post_magazine', 'update_menu_item_url_with_latest_magazine', 10, 3);
 
-function update_menu_item_url_with_latest_magazine($post_id, $post, $update) {
-    if (!$update) {
+add_action('save_post_magazine', 'update_latest_magazine_menu_item', 10, 3);
+
+function update_latest_magazine_menu_item($post_id, $post, $update) {
+    // Vérifiez si c'est une révision
+    if (wp_is_post_revision($post_id)) {
         return;
     }
 
-    // Query to get the latest published magazine post
+    // Requête pour obtenir le dernier magazine publié
     $latest_magazine_query = new WP_Query(array(
         'post_type'      => 'magazine',
         'posts_per_page' => 1,
@@ -176,15 +179,24 @@ function update_menu_item_url_with_latest_magazine($post_id, $post, $update) {
         $latest_magazine_url = get_permalink($latest_magazine_id);
         wp_reset_postdata();
 
-        // ID of the menu item to update
+        // ID de l'item de menu à mettre à jour
         $menu_item_id = 355;
 
-        // Update the menu item
+        // Mettre à jour l'item de menu avec la nouvelle URL
         $menu_item_data = array(
             'ID' => $menu_item_id,
             'url' => $latest_magazine_url,
         );
 
-        wp_update_nav_menu_item(0, $menu_item_data);
+        $result = wp_update_nav_menu_item(0, $menu_item_data);
+
+        // Vérifiez si la mise à jour a réussi
+        if (is_wp_error($result)) {
+            error_log('Erreur lors de la mise à jour de l\'item de menu : ' . $result->get_error_message());
+        } else {
+            error_log('Item de menu mis à jour avec succès avec l\'URL : ' . $latest_magazine_url);
+        }
+    } else {
+        error_log('Aucun magazine trouvé.');
     }
 }
