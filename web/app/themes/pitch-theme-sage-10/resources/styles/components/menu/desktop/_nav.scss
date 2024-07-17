@@ -71,14 +71,19 @@
                     }
 
                     &.dropdown-toggle.show,
-                    &:hover,
-                    &.active {
+                    &:hover {
                       &::after {
                         top: 59%;
                         transform: translateY(-50%) rotate(180deg);
                         transition: all 0.2s;
                       }
 
+                      &::before {
+                        width: 100%;
+                      }
+                    }
+
+                    &.active {
                       &::before {
                         width: 100%;
                       }
