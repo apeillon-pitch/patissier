@@ -1,7 +1,7 @@
 <div class="section">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-9">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-8">
         <div class="wp-heading">
           @if($data['thumbnail'])
             <figure class="cover thumbnail">
@@ -26,7 +26,7 @@
           @endif
         </div>
       </div>
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-4 col-xl-3">
         <div class="d-flex flex-column wp-widgets">
           @include('partials.template-parts.widgets.recipe-suggestion')
           @include('partials.template-parts.widgets.author')

@@ -36,6 +36,15 @@
             </div>
           @endforeach
         </div>
+
+        @if($section['link_repeater'])
+          <div class="d-flex flex-row justify-content-center wp-buttons mt-5">
+            @foreach($section['link_repeater'] as $item)
+              @include('partials.template-parts.link', ['item' => $item['link'], 'class' => 'btn btn-' . $item['style']])
+            @endforeach
+          </div>
+        @endif
+
       </div>
     </div>
   </div>
