@@ -186,7 +186,7 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
             'url' => $latest_magazine_url,
         );
 
-        $result = wp_update_nav_menu_item(0, $menu_item_data);
+        $result = wp_update_nav_menu_item(2, $menu_item_data);
 
         // Vérifiez si la mise à jour a réussi
         if (is_wp_error($result)) {
