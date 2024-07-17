@@ -18,12 +18,12 @@
           <i class="fa-regular fa-magnifying-glass"></i>
         </div>
         <div class="d-none d-lg-flex flex-row wp-links-desktop align-items-center">
-          <button data-bs-toggle="modal" data-bs-target="#newsletterModal">
+          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#newsletterModal">
             Newsletter
-          </button>
-          <button data-bs-toggle="modal" data-bs-target="#accountModal">
+          </a>
+          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#accountModal">
             Mon compte
-          </button>
+          </a>
           <a href="https://www.facebook.com/profile.php?id=100067401436602" aria-label="Facebook" target="_blank">
             <i class="fa-brands fa-square-facebook"></i>
           </a>

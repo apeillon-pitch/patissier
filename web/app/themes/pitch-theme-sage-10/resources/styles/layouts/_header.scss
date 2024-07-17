@@ -20,12 +20,32 @@ header {
       height: 58px;
     }
 
-    button {
+    a.link {
+      position: relative;
       color: white;
       border: 0;
       padding: 0;
       text-transform: uppercase;
+      text-decoration: none;
       background-color: transparent;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transition: 0.2s ease-out;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
     }
 
     .wp-links-mobile {
