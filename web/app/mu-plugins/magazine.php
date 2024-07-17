@@ -183,12 +183,10 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
         // Mettre à jour l'item de menu avec la nouvelle URL
         $menu_item_data = array(
             'ID' => $menu_item_id,
-            'menu-item-url' => $latest_magazine_url,
+            'url' => $latest_magazine_url,
         );
 
-        $menu_id = get_term_by('name', 'primary', 'nav_menu')->term_id;
-
-        $result = wp_update_nav_menu_item($menu_id, $menu_item_data);
+        $result = wp_update_nav_menu_item(0, $menu_item_data);
 
         // Vérifiez si la mise à jour a réussi
         if (is_wp_error($result)) {
@@ -200,3 +198,4 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
         error_log('Aucun magazine trouvé.');
     }
 }
+
