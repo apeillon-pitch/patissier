@@ -166,7 +166,7 @@ function update_menu_item_url_with_latest_magazine($post_id, $post, $update) {
     $latest_magazine_query = new WP_Query(array(
         'post_type'      => 'magazine',
         'posts_per_page' => 1,
-        'orderby'        => 'publish_date',
+        'orderby'        => 'date',
         'order'          => 'DESC',
     ));
 
