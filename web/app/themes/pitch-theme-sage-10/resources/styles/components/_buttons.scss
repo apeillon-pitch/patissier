@@ -3,9 +3,19 @@
   text-transform: uppercase;
   transition: 0.3s ease-out;
 
+  &:hover {
+    border-color: $primary;
+    background-color: transparent;
+  }
+
   &.btn-secondary {
     color: white;
     border: 1px solid $secondary;
+
+    &:hover {
+      border-color: $grey-three;
+      background-color: $grey-three;
+    }
   }
 
   &.btn-tertiary {
@@ -29,6 +39,7 @@
       bottom: 0;
       left: 0;
       background-color: $black-one;
+      transition: 0.2s ease-out;
     }
 
     &::after {
@@ -36,6 +47,12 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    &:hover {
+      &::before {
+        width: 0;
+      }
     }
   }
 }
