@@ -96,7 +96,7 @@
               $title = get_the_title($post->ID);
               $permalink = get_the_permalink($post->ID);
             @endphp
-            <div class="col-12 h-100 mb-4">
+            <div class="col-12 mb-4">
               <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two main h-100">
                 @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
               </a>
