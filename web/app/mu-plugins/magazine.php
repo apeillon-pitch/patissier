@@ -154,3 +154,37 @@ function getMagazineData($args)
         return $data;
     }
 }
+
+add_action('save_post_magazine', 'update_menu_item_url_with_latest_magazine', 10, 3);
+
+function update_menu_item_url_with_latest_magazine($post_id, $post, $update) {
+    if (!$update) {
+        return;
+    }
+
+    // Query to get the latest published magazine post
+    $latest_magazine_query = new WP_Query(array(
+        'post_type'      => 'magazine',
+        'posts_per_page' => 1,
+        'orderby'        => 'publish_date',
+        'order'          => 'DESC',
+    ));
+
+    if ($latest_magazine_query->have_posts()) {
+        $latest_magazine_query->the_post();
+        $latest_magazine_id = get_the_ID();
+        $latest_magazine_url = get_permalink($latest_magazine_id);
+        wp_reset_postdata();
+
+        // ID of the menu item to update
+        $menu_item_id = 355;
+
+        // Update the menu item
+        $menu_item_data = array(
+            'ID' => $menu_item_id,
+            'url' => $latest_magazine_url,
+        );
+
+        wp_update_nav_menu_item(0, $menu_item_data);
+    }
+}
