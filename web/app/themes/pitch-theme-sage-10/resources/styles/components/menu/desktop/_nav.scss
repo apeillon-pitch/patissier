@@ -34,6 +34,18 @@
                     text-transform: uppercase;
                     padding: 0;
 
+                    &::before {
+                      display: block;
+                      position: absolute;
+                      content: "";
+                      height: 1px;
+                      width: 0;
+                      bottom: 0;
+                      left: 0;
+                      background-color: $black-one;
+                      transition: 0.2s ease-out;
+                    }
+
                     &.dropdown-toggle {
                       z-index: 888;
 
@@ -66,6 +78,10 @@
                         transform: translateY(-50%) rotate(180deg);
                         transition: all 0.2s;
                       }
+
+                      &::before {
+                        width: 100%;
+                      }
                     }
                   }
                 }
@@ -73,14 +89,14 @@
                 .dropdown-menu {
                   border: 0;
                   padding-top: 18px;
-                  top: 21px;
-                  border-radius: $border-radius;
+                  top: 18px;
+                  border-radius: 0;
                   z-index: 9;
                   background: transparent !important;
 
                   div {
-                    padding: 16px 24px;
-                    border-radius: $border-radius;
+                    padding: 1.5rem 3rem;
+                    border-radius: 0;
                     background-color: white;
                     transition: all ease-in-out 0.3s;
                   }
@@ -91,10 +107,11 @@
 
                       a {
                         &.dropdown-item {
-                          color: black;
+                          color: $black-one;
                           font-size: 0.875rem;
                           font-weight: 400;
                           padding: 0;
+                          text-transform: uppercase;
 
                           &:hover,
                           &.active {
@@ -130,7 +147,7 @@
     transition: all 0.3s;
 
     div {
-      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 25%);
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 5%);
     }
   }
 }
