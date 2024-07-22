@@ -57,7 +57,7 @@
         @if ($header['data']['logo'])
           <div class="wp-block order-1 order-lg-2">
             <a href="{{ home_url() }}" aria-label="Accueil">
-              {!! wp_get_attachment_image( $header['data']['logo']['id'], 'medium','', array( "class" => "")) !!}
+              {!! wp_get_attachment_image( $header['data']['logo']['id'], 'medium','', array( "class" => "d-block mx-auto")) !!}
             </a>
           </div>
         @endif
