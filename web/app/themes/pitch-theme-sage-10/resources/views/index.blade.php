@@ -18,13 +18,6 @@
         <h1 class="section-title">{!! $data['title'] !!}</h1>
         @if(is_post_type_archive('recipe'))
           <div class="d-flex flex-row justify-content-end">
-            @php $terms = get_terms('taxo-magazine') @endphp
-            <select id="mag-filter">
-              <option value="" disabled selected>Tous les numéros</option>
-              @foreach($terms as $term)
-                <option value="{{ get_term_link($term) }}">Numéro #{!! $term->name !!}</option>
-              @endforeach
-            </select>
             @if($data['button'])
               <a href="{{ $data['button']['url'] }}" target="{{ $data['button']['target'] }}"
                  class="btn btn-secondary ms-4"
