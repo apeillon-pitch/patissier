@@ -5,7 +5,7 @@
 @endphp
 <div class="row justify-content-center">
   <div class="col-12 col-lg-3 col-xxl-4">
-    <figure class="cover mb-0" style="height: 300px">
+    <figure class="cover mb-0" style="height: 240px">
       @if($thumbnail)
         {!! wp_get_attachment_image($thumbnail['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
       @else
