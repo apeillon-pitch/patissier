@@ -1,7 +1,7 @@
 <div class="wp-heading-single">
   <div class="container">
     <div class="d-flex flex-row justify-content-between">
-      <span class="section-title">Le numéro du mois</span>
+      <span class="section-title">Index par numéro</span>
 
       @php $id = get_the_ID(); $mags = getMagazines(-1) @endphp
       <select id="mag-filter">
