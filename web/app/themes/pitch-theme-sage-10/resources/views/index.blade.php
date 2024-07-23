@@ -6,6 +6,8 @@
     @php $data = get_field('archive_podcast', 'options'); @endphp
   @elseif(is_post_type_archive('recipe'))
     @php $data = get_field('archive_recipe', 'options'); @endphp
+  @elseif(is_post_type_archive('announcement'))
+    @php $data = get_field('archive_announcement', 'options'); @endphp
   @elseif(is_tax('taxo-magazine'))
     @php $data = get_field('archive_magazine', 'options'); @endphp
   @else
