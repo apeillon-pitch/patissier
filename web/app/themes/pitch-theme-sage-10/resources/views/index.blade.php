@@ -71,6 +71,15 @@
         </div>
       </div>
     @endwhile
+  @elseif(is_post_type_archive('announcement'))
+    @while(have_posts())
+      @php the_post() @endphp
+      <div class="section card-announcement">
+        <div class="container">
+          @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+        </div>
+      </div>
+    @endwhile
   @elseif(is_post_type_archive('recipe') or is_tax('taxo-magazine'))
     <div class="section">
       <div class="container">
