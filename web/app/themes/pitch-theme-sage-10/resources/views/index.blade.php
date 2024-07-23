@@ -28,7 +28,7 @@
               </a>
             @endif
           </div>
-        @elseif(is_post_type_archive('podcast'))
+        @elseif(is_post_type_archive('podcast') or is_post_type_archive('announcement'))
           @if($data['button'])
             <a href="{{ $data['button']['url'] }}" target="{{ $data['button']['target'] }}" class="btn btn-secondary"
                aria-label="{!! $data['button']['title'] !!}">
