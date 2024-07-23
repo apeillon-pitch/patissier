@@ -44,7 +44,7 @@ function announcement() {
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
-        'has_archive'           => 'podcast',
+        'has_archive'           => 'petites-annonces',
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'rewrite'               => false,
