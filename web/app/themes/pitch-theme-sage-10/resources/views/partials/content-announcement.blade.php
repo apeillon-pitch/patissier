@@ -2,6 +2,11 @@
   $title = get_the_title();
   $excerpt = get_field('excerpt');
   $thumbnail = get_field('thumbnail');
+  $price = get_field('price');
+  $phone = get_field('phone_number');
+  $localisation = get_field('localisation');
+  $email = get_field('email');
+  $website = get_field('website');
 @endphp
 <div class="row justify-content-center">
   <div class="col-12 col-lg-4 col-xxl-3">
@@ -22,6 +27,14 @@
       @if($excerpt)
         <p>{!! $excerpt !!}</p>
       @endif
+
+      <div class="d-flex flex-column">
+        @if($price)
+          <div class="d-flex flex-row align-items-center">
+            <span>{!! $price !!}</span>
+          </div>
+        @endif
+      </div>
 
     </div>
   </div>
