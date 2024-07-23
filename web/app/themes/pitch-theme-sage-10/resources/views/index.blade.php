@@ -128,5 +128,9 @@
     </div>
   @endif
 
-  {!! get_the_posts_navigation() !!}
+  <div class="container">
+    <div class="d-flex flex-row justify-content-center mb-5">
+      {!! get_the_posts_pagination() !!}
+    </div>
+  </div>
 @endsection
