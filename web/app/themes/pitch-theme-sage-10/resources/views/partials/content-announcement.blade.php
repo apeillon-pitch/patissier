@@ -31,13 +31,13 @@
       <div class="d-flex flex-column">
         @if($price)
           <div class="d-flex flex-row align-items-center">
-            <img src="@asset('../../images/euro.svg')" alt="" width="20px" height="20px">
+            <img src="@asset('../../images/euro.svg')" alt="" width="20px" height="20px" class="me-2">
             <span>{!! $price !!}</span>
           </div>
         @endif
         @if($phone)
           <div class="d-flex flex-row align-items-center">
-            <img src="@asset('../../images/phone.svg')" alt="" width="20px" height="20px">
+            <img src="@asset('../../images/phone.svg')" alt="" width="20px" height="20px" class="me-2">
             <span>{!! $phone !!}</span>
           </div>
         @endif
