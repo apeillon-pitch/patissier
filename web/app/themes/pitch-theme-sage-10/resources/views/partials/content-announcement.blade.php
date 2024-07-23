@@ -35,6 +35,12 @@
             <span>{!! $price !!}</span>
           </div>
         @endif
+        @if($phone)
+          <div class="d-flex flex-row align-items-center">
+            <img src="@asset('../../images/phone.svg')" alt="" width="20px" height="20px">
+            <span>{!! $phone !!}</span>
+          </div>
+        @endif
       </div>
 
     </div>
