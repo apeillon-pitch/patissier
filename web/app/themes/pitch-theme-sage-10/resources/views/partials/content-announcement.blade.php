@@ -17,7 +17,7 @@
     <div class="d-flex flex-column wp-content">
 
       @if($title)
-        <h2 class="title">{!! $title !!}</h2>
+        <h2 class="title mb-4">{!! $title !!}</h2>
       @endif
       @if($excerpt)
         <p>{!! $excerpt !!}</p>
