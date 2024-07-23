@@ -13,24 +13,34 @@
   }
 
   .page-numbers {
-    &:not(.next),
-    &:not(.prev) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 42px;
-      width: 42px;
-      color: black;
-      border-radius: $border-radius;
-      margin: 2px;
-      background-color: transparent;
-      text-decoration: none;
-      transition: 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 42px;
+    color: black;
+    border-radius: $border-radius;
+    margin: 2px;
+    background-color: transparent;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+
+    &.current,
+    &:hover {
+      color: white;
+      background-color: $pink-one;
+    }
+
+    &.next,
+    &.prev {
+      height: inherit;
+      width: inherit;
+      border-radius: inherit;
 
       &.current,
       &:hover {
-        color: white;
-        background-color: $pink-one;
+        color: $pink-one;
+        background-color: transparent;
       }
     }
   }
