@@ -28,7 +28,6 @@
       </div>
       <div class="col-12 col-lg-4 col-xl-3">
         <div class="d-flex flex-column wp-widgets">
-          @include('partials.template-parts.widgets.recipe-suggestion')
           @include('partials.template-parts.widgets.author')
           @include('partials.template-parts.widgets.magazine')
           @include('partials.template-parts.widgets.text')

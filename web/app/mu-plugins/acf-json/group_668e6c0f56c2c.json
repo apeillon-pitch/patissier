@@ -172,6 +172,26 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_669fb38bc0c3a",
+                    "label": "Titre",
+                    "name": "widget_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Une recette de ...",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_668e7a18831c1",
                     "label": "Photo",
                     "name": "picture",
@@ -496,5 +516,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721135335
+    "modified": 1721742341
 }
