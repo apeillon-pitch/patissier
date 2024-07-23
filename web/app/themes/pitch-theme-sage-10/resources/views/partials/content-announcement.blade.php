@@ -28,7 +28,7 @@
         <p>{!! $excerpt !!}</p>
       @endif
 
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column" style="gap: 6px;">
         @if($price)
           <div class="d-flex flex-row align-items-center">
             <img src="@asset('../../images/euro.svg')" alt="" width="20px" height="20px" class="me-2">
