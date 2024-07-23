@@ -35,6 +35,18 @@
             <span>{!! $price !!}</span>
           </div>
         @endif
+        @if($localisation)
+          <div class="d-flex flex-row align-items-center">
+            <img src="@asset('../../images/localisation.svg')" alt="" width="20px" height="20px" class="me-2">
+            <span>{!! $localisation !!}</span>
+          </div>
+        @endif
+        @if($email)
+          <div class="d-flex flex-row align-items-center">
+            <img src="@asset('../../images/email.svg')" alt="" width="20px" height="20px" class="me-2">
+            <span>{!! $email !!}</span>
+          </div>
+        @endif
         @if($phone)
           <div class="d-flex flex-row align-items-center">
             <img src="@asset('../../images/phone.svg')" alt="" width="20px" height="20px" class="me-2">
