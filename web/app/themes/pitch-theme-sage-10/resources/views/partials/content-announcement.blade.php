@@ -31,6 +31,7 @@
       <div class="d-flex flex-column">
         @if($price)
           <div class="d-flex flex-row align-items-center">
+            <img src="@asset('../../images/euro.svg')" alt="" width="20px" height="20px">
             <span>{!! $price !!}</span>
           </div>
         @endif
