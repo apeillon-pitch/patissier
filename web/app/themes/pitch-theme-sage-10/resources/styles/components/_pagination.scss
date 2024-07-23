@@ -13,22 +13,25 @@
   }
 
   .page-numbers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 42px;
-    width: 42px;
-    color: black;
-    border-radius: 50%;
-    margin: 2px;
-    background-color: transparent;
-    text-decoration: none;
-    transition: 0.2s ease-out;
+    &:not(.next),
+    &:not(.prev) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 42px;
+      width: 42px;
+      color: black;
+      border-radius: $border-radius;
+      margin: 2px;
+      background-color: transparent;
+      text-decoration: none;
+      transition: 0.2s ease-out;
 
-    &.current,
-    &:hover {
-      color: white;
-      background-color: $pink-one;
+      &.current,
+      &:hover {
+        color: white;
+        background-color: $pink-one;
+      }
     }
   }
 }
