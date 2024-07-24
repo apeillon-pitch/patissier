@@ -5,7 +5,7 @@
       <div class="d-flex flex-column wp-content">
         <div class="d-flex flex-column wp-heading">
           @if ($section['overtitle_group']['title'])
-            @include('partials.template-parts.title', ['item' => $section['overtitle_group'], 'class' => 'overtitle style-two large'])
+            @include('partials.template-parts.title', ['item' => $section['overtitle_group'], 'class' => 'overtitle style-two'])
           @endif
           @if ($section['title_group']['title'])
             @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title'])
