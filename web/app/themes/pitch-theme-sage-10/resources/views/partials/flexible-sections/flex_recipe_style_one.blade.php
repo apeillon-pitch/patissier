@@ -19,7 +19,7 @@
   @foreach($recipes as $recipe )
     <div id="section-{{ $row }}" class="section image-text style-one {{ $options['oclasses'] }}">
       <div class="inner-section">
-        <div class="{{ is_singular('recipe') or is_singular('post') ? '' : 'container' }}">
+        <div class="{{ (is_singular('recipe') or is_singular('post')) ? '' : 'container' }}">
           <div class="row align-items-center justify-content-between">
             <div class="col-12 col-lg-5 {{ $section['position'] === 'left' ? 'order-2' : 'order-2 order-lg-1' }}">
               <div class="d-flex flex-column wp-text">

@@ -10,7 +10,7 @@
 @if($recipes)
   <div id="section-{{ $row }}" class="section recipe-suggestion style-one bg-grey {{ $options['oclasses'] }}">
     <div class="inner-section">
-      <div class="{{ is_singular('recipe') or is_singular('post') ? '' : 'container' }}">
+      <div class="{{ (is_singular('recipe') or is_singular('post')) ? '' : 'container' }}">
         <div class="row">
           <div class="col-12 text-center">
             @if ($section['title_group']['title'])

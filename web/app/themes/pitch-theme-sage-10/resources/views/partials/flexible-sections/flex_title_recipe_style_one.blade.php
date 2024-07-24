@@ -1,7 +1,7 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
 <div id="section-{{ $row }}" class="section title-recipe style-one {{ $options['oclasses'] }}">
   <div class="inner-section">
-    <div class="{{ is_singular('recipe') or is_singular('post') ? '' : 'container' }}">
+    <div class="{{ (is_singular('recipe') or is_singular('post')) ? '' : 'container' }}">
       <div class="row">
         <div class="col-12">
           @if ($section['title_group']['title'])
