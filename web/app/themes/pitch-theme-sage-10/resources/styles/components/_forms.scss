@@ -1,4 +1,9 @@
 form {
+  label {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
   input {
     &[type="text"],
     &[type="email"],
