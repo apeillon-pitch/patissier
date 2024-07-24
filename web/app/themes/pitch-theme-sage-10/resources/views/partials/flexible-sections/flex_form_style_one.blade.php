@@ -3,12 +3,12 @@
   <div class="inner-section">
     <div class="{{ (is_singular('recipe') or is_singular('post')) ? '' : 'container' }}">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
+        <div class="col-12 col-lg-10 col-xl-9">
           @if ($section['title_group']['title'])
             @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
           @endif
         </div>
-        <div class="col-12 col-lg-10">
+        <div class="col-12 col-lg-10 col-xl-9">
           @if($section['form_id'])
             <div>
               {{ gravity_form( $section['form_id'], false, false, false, '', true, 12 )  }}
