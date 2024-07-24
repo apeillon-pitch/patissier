@@ -1,5 +1,5 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
-<div id="section-{{ $row }}" class="section form style-one {{ $options['oclasses'] }}">
+<div id="section-{{ $row }}" class="section form style-one bg-grey {{ $options['oclasses'] }}">
   <div class="inner-section">
     <div class="{{ is_singular('recipe') ? '' : 'container' }}">
       <div class="row align-items-center">
