@@ -4,13 +4,18 @@
       <span class="section-title">Index par numéro</span>
 
       @php $id = get_the_ID(); $mags = getMagazines(-1) @endphp
-      <select id="mag-filter">
-        @foreach($mags as $mag)
-          <option
-            value="{{ $mag['permalink'] }}" {{ $id === $mag['id'] ? 'selected' : '' }}>
-            #{!! $mag['magazine']->name !!} | {!! $mag['date_short'] !!}</option>
-        @endforeach
-      </select>
+      @if($mags)
+        <div class="d-flex flex-row justify-content-end align-items-center">
+          <span class="me-2">Vous pouvez naviguer entre les numéros ici :</span>
+          <select id="mag-filter">
+            @foreach($mags as $mag)
+              <option
+                value="{{ $mag['permalink'] }}" {{ $id === $mag['id'] ? 'selected' : '' }}>
+                #{!! $mag['magazine']->name !!} | {!! $mag['date_short'] !!}</option>
+            @endforeach
+          </select>
+        </div>
+      @endif
     </div>
   </div>
 </div>
