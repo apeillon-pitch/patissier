@@ -19,6 +19,14 @@ function capitaine_file_types( $types, $file, $filename, $mimes ) {
   return $types;
 }
 
+add_filter('gform_field_content', 'replace_required_label', 10, 5);
+function replace_required_label($field_content, $field, $value, $lead_id, $form_id) {
+    if ($field['isRequired']) {
+        $field_content = str_replace('(Nécessaire)', '*', $field_content);
+    }
+    return $field_content;
+}
+
 // ACF Preview
 function my_acf_admin_head() {
   $siteURL = get_site_url();

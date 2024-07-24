@@ -1,35 +1,73 @@
-form {
-  label {
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
+.gform_wrapper {
+  form {
+    .gform-body {
+      .gform_fields {
+        label {
+          font-size: 0.875rem;
+          font-weight: 400;
+          margin-bottom: 0.375rem;
+        }
 
-  input {
-    &[type="text"],
-    &[type="email"],
-    &[type="tel"] {
-      font-size: 0.75rem !important;
-      border-radius: $border-radius !important;
+        .gfield_required {
+          font-size: 0.75rem !important;
+          color: $pink-one;
+          margin-left: -2px;
+        }
+
+        input {
+          &[type="text"],
+          &[type="email"],
+          &[type="tel"] {
+            font-size: 0.75rem !important;
+            border-color: $grey-five;
+            border-radius: $border-radius !important;
+
+            &::-webkit-input-placeholder {
+              color: #c5c5c5;
+            }
+
+            &::-moz-placeholder {
+              color: #c5c5c5;
+            }
+
+            &:-moz-placeholder {
+              color: #c5c5c5;
+            }
+
+            &::-ms-input-placeholder {
+              color: #c5c5c5;
+            }
+          }
+        }
+
+        textarea {
+          font-size: 0.75rem !important;
+          border-color: $grey-five;
+          border-radius: $border-radius !important;
+        }
+      }
     }
 
-    &[type="submit"] {
-      font-size: 0.875rem !important;
-      font-weight: 600 !important;
-      color: $black-one !important;
-      text-transform: uppercase !important;
-      border-radius: $border-radius !important;
-      background-color: white !important;
+    .gform_footer {
+      justify-content: end;
     }
-  }
 
-  .gfield_required_text {
-    display: none !important;
-  }
+    input {
+      &[type="submit"] {
+        font-size: 0.875rem !important;
+        font-weight: 600 !important;
+        color: white !important;
+        text-transform: uppercase !important;
+        border-radius: $border-radius !important;
+        background-color: $pink-one !important;
+      }
+    }
 
-  .ginput_container_consent {
-    .gfield_consent_label {
-      font-size: 0.625rem;
-      color: white;
+    .ginput_container_consent {
+      .gfield_consent_label {
+        font-size: 0.625rem;
+        color: white;
+      }
     }
   }
 }
@@ -52,5 +90,26 @@ form {
 
   .select2-results__option {
     font-size: 0.75rem;
+  }
+}
+
+footer {
+  .gform_wrapper {
+    form {
+      .gfield_required_text {
+        display: none !important;
+      }
+
+      input {
+        &[type="submit"] {
+          color: $black-one !important;
+          background-color: white !important;
+        }
+      }
+
+      .gform_footer {
+        justify-content: start;
+      }
+    }
   }
 }
