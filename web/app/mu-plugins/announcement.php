@@ -72,6 +72,51 @@ function getAnnouncements($number)
     return $data;
 }
 
+// Register Custom Taxonomy
+function announcementTaxonomy() {
+
+    $labels = array(
+        'name'                       => _x( 'Types d\'annonces', 'Taxonomy General Name', 'jdp' ),
+        'singular_name'              => _x( 'Type d\'annonces', 'Taxonomy Singular Name', 'jdp' ),
+        'menu_name'                  => __( 'Types d\'annonces', 'jdp' ),
+        'all_items'                  => __( 'All Items', 'jdp' ),
+        'parent_item'                => __( 'Parent Item', 'jdp' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'jdp' ),
+        'new_item_name'              => __( 'New Item Name', 'jdp' ),
+        'add_new_item'               => __( 'Add New Item', 'jdp' ),
+        'edit_item'                  => __( 'Edit Item', 'jdp' ),
+        'update_item'                => __( 'Update Item', 'jdp' ),
+        'view_item'                  => __( 'View Item', 'jdp' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'jdp' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'jdp' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'jdp' ),
+        'popular_items'              => __( 'Popular Items', 'jdp' ),
+        'search_items'               => __( 'Search Items', 'jdp' ),
+        'not_found'                  => __( 'Not Found', 'jdp' ),
+        'no_terms'                   => __( 'No items', 'jdp' ),
+        'items_list'                 => __( 'Items list', 'jdp' ),
+        'items_list_navigation'      => __( 'Items list navigation', 'jdp' ),
+    );
+    $rewrite = array(
+        'slug'                       => 'type-annonce',
+        'with_front'                 => true,
+        'hierarchical'               => false,
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
+    );
+    register_taxonomy( 'taxo-announcement', array( 'announcement' ), $args );
+
+}
+add_action( 'init', 'announcementTaxonomy', 0 );
+
 
 function getAnnouncementById($id)
 {

@@ -72,14 +72,18 @@
       </div>
     @endwhile
   @elseif(is_post_type_archive('announcement'))
-    @while(have_posts())
-      @php the_post() @endphp
-      <div class="section card-announcement">
-        <div class="container">
-          @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-        </div>
+    <div class="section">
+      <div class="container">
+        @php $i = 0 @endphp
+        @while(have_posts())
+          @php the_post() @endphp
+          <div class="card-announcement {{ $i == 0 ? 'pt-0' : '' }}">
+            @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+          </div>
+          @php $i++ @endphp
+        @endwhile
       </div>
-    @endwhile
+    </div>
   @elseif(is_post_type_archive('recipe') or is_tax('taxo-magazine'))
     <div class="section">
       <div class="container">

@@ -1,3 +1,32 @@
+.card-announcement {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $grey-five;
+
+  .category {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-family: $merriweather;
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+
+  figure {
+    height: 240px;
+  }
+
+  .wp-details {
+    gap: 6px;
+    font-size: 0.875rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
+
 .card-recipe {
   &.style-one,
   &.style-two,
