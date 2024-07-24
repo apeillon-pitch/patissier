@@ -17,53 +17,27 @@ class Post extends Composer
         'partials.content-*',
     ];
 
+    public function override()
+    {
+        return [
+            'data' => $this->data(),
+        ];
+    }
+
     /**
      * Data to be passed to view before rendering, but after merging.
      *
      * @return array
      */
-    public function override()
+    public function data()
     {
-        return [
-            'title' => $this->title(),
+        $data = [
+            'title' => get_the_title(),
+            'thumbnail' => get_field('thumbnail'),
+            'excerpt' => get_field('excerpt'),
+            'content' => get_the_content(),
         ];
-    }
 
-    /**
-     * Returns the post title.
-     *
-     * @return string
-     */
-    public function title()
-    {
-        if ($this->view->name() !== 'partials.page-header') {
-            return get_the_title();
-        }
-
-        if (is_home()) {
-            if ($home = get_option('page_for_posts', true)) {
-                return get_the_title($home);
-            }
-
-            return __('Latest Posts', 'sage');
-        }
-
-        if (is_archive()) {
-            return get_the_archive_title();
-        }
-
-        if (is_search()) {
-            return sprintf(
-                /* translators: %s is replaced with the search query */
-                __('Search Results for %s', 'sage'),
-                get_search_query()
-            );
-        }
-
-        if (is_404()) {
-            return __('Not Found', 'sage');
-        }
-
-        return get_the_title();
+        return $data;
     }
 }

@@ -1,19 +1,28 @@
-<article @php(post_class())>
-  <header>
-    <h1 class="entry-title">
-      {!! $title !!}
-    </h1>
-
-    @include('partials.entry-meta')
-  </header>
-
-  <div class="entry-content">
-    @php(the_content())
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-8">
+        <div class="wp-heading">
+          @if($data['thumbnail'])
+            <figure class="cover thumbnail">
+              {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
+            </figure>
+          @endif
+          @if($data['title'])
+            <h1 class="section-title">{!! $data['title'] !!}</h1>
+          @endif
+          @if ($data['content'])
+           {!! $data['content'] !!}
+          @endif
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 col-xl-3">
+        <div class="d-flex flex-column wp-widgets">
+          @include('partials.template-parts.widgets.author')
+          @include('partials.template-parts.widgets.magazine')
+          @include('partials.template-parts.widgets.text')
+        </div>
+      </div>
+    </div>
   </div>
-
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-
-  @php(comments_template())
-</article>
+</div>
