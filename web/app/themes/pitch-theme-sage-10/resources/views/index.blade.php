@@ -98,7 +98,7 @@
           $total_posts = count($posts);
         @endphp
         <div class="row wp-list">
-          <div class="col-12 col-lg-5">
+          <div class="col-12 col-lg-6">
             @php
               $post = $posts[0];
               $title = get_the_title($post->ID);
@@ -110,15 +110,15 @@
               </a>
             </div>
           </div>
-          <div class="col-12 col-lg-7">
+          <div class="col-12 col-lg-6">
             <div class="row">
               @php
-                $right_side_posts = array_slice($posts, 1, 6);
+                $right_side_posts = array_slice($posts, 1, 4);
                 $title = get_the_title($post->ID);
                 $permalink = get_the_permalink($post->ID);
               @endphp
               @foreach ($right_side_posts as $post)
-                <div class="col-12 col-lg-4 mb-4">
+                <div class="col-12 col-lg-6 mb-4">
                   <a href="{{ $permalink }}" aria-label="{!! $title !!}" class="card-recipe style-two">
                     @includeFirst(['partials.content-recipe'], ['id' => $post->ID])
                   </a>
@@ -129,7 +129,7 @@
         </div>
         <div class="grid">
           @php
-            $right_side_posts = array_slice($posts, 6, -1);
+            $right_side_posts = array_slice($posts, 4, -1);
             $title = get_the_title($post->ID);
             $permalink = get_the_permalink($post->ID);
           @endphp
