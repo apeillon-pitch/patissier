@@ -11,7 +11,7 @@
   $website = get_field('website');
 @endphp
 <div class="row justify-content-center">
-  <div class="col-12 col-lg-4 col-xxl-3">
+  <div class="col-12 col-lg-4 col-xxl-3 mb-4 mb-lg-0">
     <figure class="cover mb-0">
       @if($thumbnail)
         {!! wp_get_attachment_image($thumbnail['id'], 'large', '', array("class" => "img-fluid w-100")) !!}

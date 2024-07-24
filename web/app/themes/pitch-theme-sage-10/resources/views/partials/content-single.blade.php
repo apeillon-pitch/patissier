@@ -18,7 +18,7 @@
       </div>
       <div class="col-12 col-lg-4 col-xl-3">
         <div class="d-flex flex-column wp-widgets">
-          
+
         </div>
       </div>
     </div>
