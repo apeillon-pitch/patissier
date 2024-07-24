@@ -1,11 +1,11 @@
 <div class="wp-heading-single">
   <div class="container">
-    <div class="d-flex flex-row justify-content-between">
-      <span class="section-title">Index par numéro</span>
+    <div class="d-flex flex-column flex-lg-row justify-content-between">
+      <span class="section-title mb-4 mb-lg-0">Index par numéro</span>
 
       @php $id = get_the_ID(); $mags = getMagazines(-1) @endphp
       @if($mags)
-        <div class="d-flex flex-row justify-content-end align-items-center">
+        <div class="d-flex flex-row justify-content-lg-end align-items-center">
           <span class="me-2">Vous pouvez naviguer entre les numéros ici :</span>
           <select id="mag-filter">
             @foreach($mags as $mag)
