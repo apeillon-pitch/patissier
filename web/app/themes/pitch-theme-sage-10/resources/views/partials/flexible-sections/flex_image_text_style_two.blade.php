@@ -1,7 +1,7 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
 <div id="section-{{ $row }}" class="section image-text style-two {{ $options['oclasses'] }}">
   <div class="inner-section">
-    <div class="{{ is_singular('recipe') ? '' : 'container' }}">
+    <div class="{{ is_singular('recipe') or is_singular('post') ? '' : 'container' }}">
       <div class="row">
         <div class="col-12 col-lg-6 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
           <div class="d-flex flex-column wp-heading">

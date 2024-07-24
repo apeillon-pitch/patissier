@@ -1,7 +1,7 @@
 @php $options = getSectionOptions($section['section_options_group']); @endphp
 <div id="section-{{ $row }}" class="section accordion style-one {{ $options['oclasses'] }}">
   <div class="inner-section">
-    <div class="{{ is_singular('recipe') ? '' : 'container' }}">
+    <div class="{{ is_singular('recipe') or is_singular('post') ? '' : 'container' }}">
       @if ($section['title_group']['title'])
         @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
       @endif

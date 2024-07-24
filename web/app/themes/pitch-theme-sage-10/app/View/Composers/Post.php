@@ -32,6 +32,7 @@ class Post extends Composer
     {
         $data = [
             'title' => get_the_title(),
+            'date' => get_the_date(),
             'thumbnail' => get_field('thumbnail'),
             'excerpt' => get_field('excerpt'),
             'content' => get_the_content(),

@@ -2854,6 +2854,13 @@
                 "operator": "==",
                 "value": "magazine"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -2867,5 +2874,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721811041
+    "modified": 1721828617
 }

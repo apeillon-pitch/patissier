@@ -1,4 +1,22 @@
 body {
+  &.single-post {
+    .date {
+      font-family: $merriweather;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+      color: $black-one;
+    }
+
+    .wp-article-content {
+      .section {
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
   &.single-recipe {
     .section {
       h1 {
