@@ -16,7 +16,7 @@
       @if($thumbnail)
         {!! wp_get_attachment_image($thumbnail['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
       @else
-        <img src="@asset('../../images/thumb-annonce.jpg')" alt="">
+        <img src="@asset('../../images/thumb-annonce.jpg')" alt="Image de l'annonce" width="307px" height="241.6px" class="img-fluid">
       @endif
     </figure>
   </div>
