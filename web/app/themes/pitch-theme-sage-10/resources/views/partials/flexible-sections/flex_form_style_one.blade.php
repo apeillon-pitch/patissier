@@ -11,7 +11,7 @@
         <div class="col-12">
           @if($section['form_id'])
             <div>
-              {!! $section['form_id'] !!}
+              {{ gravity_form( $section['form_id'], false, false, false, '', true, 12 )  }}
             </div>
           @endif
           @if($section['link_repeater'])
