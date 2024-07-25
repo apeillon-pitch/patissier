@@ -21,6 +21,7 @@
             font-size: 0.75rem !important;
             border-color: $grey-five;
             border-radius: $border-radius !important;
+            box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
 
             &::-webkit-input-placeholder {
               color: #c5c5c5;
@@ -43,6 +44,7 @@
         .select2-container--default {
           .select2-selection--single {
             border-color: $grey-five;
+            box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
           }
         }
 
@@ -50,6 +52,7 @@
           font-size: 0.75rem !important;
           border-color: $grey-five;
           border-radius: $border-radius !important;
+          box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
 
           &::-webkit-input-placeholder {
             color: #c5c5c5;
