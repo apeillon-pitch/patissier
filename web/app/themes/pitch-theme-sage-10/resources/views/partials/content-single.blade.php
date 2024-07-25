@@ -2,12 +2,19 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-12 col-lg-8">
-        <div class="wp-heading mb-0">
+        <div class="d-flex flex-column wp-heading mb-0">
           @if($data['thumbnail'])
             <figure class="cover thumbnail">
               {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
             </figure>
           @endif
+          <div class="wp-category d-flex flex-row">
+            @if($data['category'])
+              <span class="category">{!! $data['category']->name !!}</span>
+            @else
+              <span class="category">Actualité</span>
+            @endif
+          </div>
           @if($data['date'])
             <span class="date">{!! $data['date'] !!}</span>
           @endif
@@ -25,14 +32,14 @@
             @endforeach
           </div>
         @endif
-
       </div>
-    </div>
-    <div class="col-12 col-lg-4 col-xl-3">
-      <div class="d-flex flex-column wp-widgets">
-
+      <div class="col-12 col-lg-4 col-xl-3">
+        <div class="d-flex flex-column wp-widgets">
+          @include('partials.template-parts.widgets.last-magazine')
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+
+

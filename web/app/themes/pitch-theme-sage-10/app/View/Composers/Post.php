@@ -35,6 +35,7 @@ class Post extends Composer
             'date' => get_the_date('l d F Y'),
             'thumbnail' => get_field('thumbnail'),
             'excerpt' => get_field('excerpt'),
+            'category' => get_field('category'),
             'content' => get_the_content(),
         ];
 

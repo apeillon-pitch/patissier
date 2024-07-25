@@ -1,5 +1,18 @@
 body {
   &.single-post {
+    .category {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 31px;
+      color: white;
+      text-transform: uppercase;
+      padding: 0 10px;
+      border-radius: $border-radius;
+      margin-bottom: 0.75rem;
+      background-color: $pink-one;
+    }
+
     .date {
       font-family: $merriweather;
       font-weight: 700;
