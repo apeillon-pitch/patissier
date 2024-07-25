@@ -3,7 +3,7 @@
   <div class="inner-section">
     <div class="{{ (is_singular('recipe') or is_singular('post')) ? '' : 'container' }}">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-9">
+        <div class="col-12 col-md-9 col-lg-8 col-xl-7">
           @if ($section['title_group']['title'])
             @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
           @endif
