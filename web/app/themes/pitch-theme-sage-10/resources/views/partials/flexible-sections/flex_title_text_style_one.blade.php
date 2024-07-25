@@ -5,7 +5,7 @@
       <div class="row align-items-center">
         <div class="col-12 col-lg-3">
           @if ($section['title_group']['title'])
-            @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
+            @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two' . $section['title_size']])
           @endif
         </div>
         <div class="col-12 col-lg-6 offset-lg-1">
