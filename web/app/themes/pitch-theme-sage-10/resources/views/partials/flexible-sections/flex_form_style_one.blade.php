@@ -8,7 +8,7 @@
             @include('partials.template-parts.title', ['item' => $section['title_group'], 'class' => 'section-title style-two large'])
           @endif
         </div>
-        <div class="col-12 col-lg-10 col-xl-9">
+        <div class="col-12 col-md-9 col-lg-8 col-xl-7">
           @if($section['form_id'])
             <div>
               {{ gravity_form( $section['form_id'], false, false, false, '', true, 12 )  }}
