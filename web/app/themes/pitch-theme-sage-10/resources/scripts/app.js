@@ -31,7 +31,7 @@ const main = async (err) => {
 
       if (!$slideshow.hasClass('slick-initialized')) {
         $slideshow.slick({
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: true,
           infinite: false,
@@ -42,7 +42,7 @@ const main = async (err) => {
             {
               breakpoint: 1220,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
               },
             },
             {
