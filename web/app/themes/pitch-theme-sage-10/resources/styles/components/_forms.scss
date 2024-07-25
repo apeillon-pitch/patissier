@@ -108,6 +108,7 @@
   min-width: 170px;
 
   .select2-selection--single {
+    position: relative;
     height: 37px;
     font-size: 0.75rem;
 
@@ -116,7 +117,7 @@
     }
 
     .select2-selection__arrow {
-      top: 7px;
+      top: 4px;
     }
   }
 
