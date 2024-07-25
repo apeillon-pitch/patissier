@@ -126,6 +126,47 @@
   }
 }
 
+.search-form {
+  input {
+    &[type="search"] {
+      border: none;
+      border: 1px solid $grey-five;
+      border-radius: $border-radius !important;
+      box-shadow: 0 4px 25px 0 rgb(0 0 0 / 5%);
+      outline: none;
+
+      &::-webkit-input-placeholder {
+        color: #c5c5c5;
+      }
+
+      &::-moz-placeholder {
+        color: #c5c5c5;
+      }
+
+      &:-moz-placeholder {
+        color: #c5c5c5;
+      }
+
+      &::-ms-input-placeholder {
+        color: #c5c5c5;
+      }
+    }
+  }
+
+  button {
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    border-radius: $border-radius !important;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    padding: 3.1px 10px;
+    background-color: $pink-one !important;
+  }
+}
+
 footer {
   .gform_wrapper {
     form {

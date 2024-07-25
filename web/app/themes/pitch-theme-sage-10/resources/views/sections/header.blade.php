@@ -15,7 +15,9 @@
           </div>
         </div>
         <div class="d-none d-lg-block">
-          <i class="fa-regular fa-magnifying-glass"></i>
+          <a href="#" class="link-icon" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </a>
         </div>
         <div class="d-none d-lg-flex flex-row wp-links-desktop align-items-center">
           <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#newsletterModal">
