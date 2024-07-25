@@ -98,7 +98,12 @@
   }
 }
 
+.ginput_container_select {
+  position: relative;
+}
+
 .select2-container--default {
+  position: relative;
   min-width: 170px;
 
   .select2-selection--single {
