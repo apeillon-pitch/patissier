@@ -15,8 +15,7 @@
                 @php $recipe = getRecipeById($recipe); @endphp
                 @if($recipe)
                   <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <a href="{{ $recipe['permalink'] }}" aria-label="{!! $recipe['title'] !!}" target="_self"
-                       class="card-recipe style-three">
+                    <div class="card-recipe style-three">
                       @if($recipe['thumbnail'])
                         <figure class="cover mb-0">
                           @if($recipe['tag'])
@@ -25,15 +24,20 @@
                           {!! wp_get_attachment_image($recipe['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
                         </figure>
                       @endif
-                      @if($recipe['title'])
-                        <h2 class="title">{!! $recipe['title'] !!}</h2>
-                      @endif
-                      @if($recipe['author']['name'])
-                        <div class="details">
-                          par {!! $recipe['author']['name'] !!}
+                      <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                          @if($recipe['title'])
+                            <h2 class="title">{!! $recipe['title'] !!}</h2>
+                          @endif
+                          @if($recipe['author']['name'])
+                            <div class="details">
+                              par {!! $recipe['author']['name'] !!}
+                            </div>
+                          @endif
                         </div>
-                      @endif
-                    </a>
+                        <a href="{{ $recipe['permalink'] }}" class="btn btn-primary" aria-label="{!! $recipe['title'] !!}" target="_self">+</a>
+                      </div>
+                    </div>
                   </div>
                 @endif
               @endforeach
