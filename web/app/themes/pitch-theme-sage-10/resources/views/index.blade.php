@@ -11,14 +11,14 @@
   @elseif(is_tax('taxo-magazine'))
     @php $data = get_field('archive_magazine', 'options'); @endphp
   @else
-    @php $data = get_field('archive_magazine', 'options'); @endphp
+    @php $data = get_field('archive_post', 'options'); @endphp
   @endif
 
   <div class="wp-heading">
     <div class="container">
       <div class="d-flex flex-row justify-content-between">
         <h1 class="section-title">{!! $data['title'] !!}</h1>
-        @if(is_post_type_archive('recipe'))
+        @if(is_post_type_archive('recipe') OR is_post_type_archive('post'))
           <div class="d-flex flex-row justify-content-end">
             @if($data['button'])
               <a href="{{ $data['button']['url'] }}" target="{{ $data['button']['target'] }}"
@@ -141,6 +141,15 @@
         </div>
       </div>
     </div>
+  @else
+    @while(have_posts())
+      @php the_post() @endphp
+      <div class="section card-article">
+        <div class="container">
+          @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+        </div>
+      </div>
+    @endwhile
   @endif
 
   <div class="container">

@@ -28,11 +28,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_66a21482a2969",
-            "label": "Catégorie",
-            "name": "category",
+            "key": "field_66a264f79c59e",
+            "label": "Extrait",
+            "name": "excerpt",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -41,16 +41,11 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "taxo-magazine",
-            "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "field_type": "checkbox",
-            "bidirectional": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "bidirectional_target": []
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -67,9 +62,12 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721898130
+    "modified": 1721918789
 }
