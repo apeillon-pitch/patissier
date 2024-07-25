@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-12 col-lg-8">
-        <div class="wp-heading">
+        <div class="wp-heading mb-0">
           @if($data['thumbnail'])
             <figure class="cover thumbnail">
               {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
@@ -12,7 +12,7 @@
             <span class="date">{!! $data['date'] !!}</span>
           @endif
           @if($data['title'])
-            <h1 class="section-title">{!! $data['title'] !!}</h1>
+            <h1 class="section-title mb-0">{!! $data['title'] !!}</h1>
           @endif
         </div>
 
