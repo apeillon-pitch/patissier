@@ -17,7 +17,8 @@
         input {
           &[type="text"],
           &[type="email"],
-          &[type="tel"] {
+          &[type="tel"],
+          &[type="file"] {
             font-size: 0.75rem !important;
             border-color: $grey-five;
             border-radius: $border-radius !important;
