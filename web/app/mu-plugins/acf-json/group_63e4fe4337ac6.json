@@ -989,6 +989,31 @@
                             "prefix_name": 0
                         },
                         {
+                            "key": "field_66a245d2021f9",
+                            "label": "Taille du titre",
+                            "name": "title_size",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "small": "small",
+                                "large": "large"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_668d2de2e6136",
                             "label": "Texte",
                             "name": "text",
@@ -2874,5 +2899,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721828617
+    "modified": 1721910771
 }
