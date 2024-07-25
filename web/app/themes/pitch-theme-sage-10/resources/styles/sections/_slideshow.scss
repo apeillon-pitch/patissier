@@ -1,0 +1,35 @@
+.section {
+  &.slideshow {
+    .section-title {
+      margin-bottom: 0.75rem;
+    }
+
+    .slideshow {
+      .slick-track {
+        gap: 1.5rem;
+
+        &::before,
+        &::after {
+          content: none;
+        }
+
+        .slide {
+          figure {
+            height: 199px;
+          }
+
+          .wp-text {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin-top: 6px;
+
+            strong,
+            b {
+              color: $black-one;
+            }
+          }
+        }
+      }
+    }
+  }
+}

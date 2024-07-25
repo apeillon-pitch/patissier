@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section-main">
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-12 col-lg-8">

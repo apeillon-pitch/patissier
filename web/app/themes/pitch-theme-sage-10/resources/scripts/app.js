@@ -18,10 +18,30 @@ const main = async (err) => {
     console.error(err);
   }
 
+  slideshowStyleOne();
   filterRecipes();
   setSelect2();
   dropdownMenu();
   getStickyMenu();
+
+  function slideshowStyleOne() {
+    $('.section.slideshow.style-one').each(function () {
+      var $section = $(this);
+      var $slideshow = $($section).find('.slideshow');
+
+      if (!$slideshow.hasClass('slick-initialized')) {
+        $slideshow.slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: false,
+          arrows: false,
+          autoplay: false,
+          centerMode: false,
+        });
+      }
+    });
+  }
 
   function filterRecipes()
   {
