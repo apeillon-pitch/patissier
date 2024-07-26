@@ -12,8 +12,8 @@
       <div class="col-12">
         @if($data['widget-recipe']['title'])
           <span class="widget-title">
-                    {!! $data['widget-recipe']['title'] !!}
-                  </span>
+            {!! $data['widget-recipe']['title'] !!}
+          </span>
         @endif
       </div>
       @foreach($recipes as $item)

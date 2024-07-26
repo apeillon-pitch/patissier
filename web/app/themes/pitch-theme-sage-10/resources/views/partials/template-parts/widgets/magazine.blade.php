@@ -9,7 +9,7 @@
           </figure>
         @endif
         <div class="d-flex flex-column">
-          <h3 class="name">La recette est disponible dans le n°{!! $data['magazine']->name !!}</h3>
+          <h3 class="name">{!! $widgets['widget_magazine']['title'] !!} {!! $data['magazine']->name !!}</h3>
           <div class="wp-cta">
             <a href="" class="btn btn-primary" aria-label="S'abonner" target="_self">S'abonner</a>
             <a href="" class="btn btn-tertiary" aria-label="Découvrir le magazine" target="_self">Découvrir le

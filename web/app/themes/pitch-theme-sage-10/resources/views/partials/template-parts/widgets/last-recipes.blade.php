@@ -4,7 +4,7 @@
     <div class="row gy-4">
       <div class="col-12">
           <span class="widget-title">
-            Ces recettes pourraient vous intéresser
+             {!! $widgets['widget_last_recipe']['title'] !!}
           </span>
       </div>
       @foreach($recipes as $item)

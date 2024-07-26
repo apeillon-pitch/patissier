@@ -31,6 +31,7 @@ class App extends Composer
             'mainMenu' => $this->mainMenu(),
             'sectionData' => $this->sectionData(),
             'global' => $this->globalData(),
+            'widgets' => $this->widgetData(),
         ];
     }
 
@@ -68,6 +69,22 @@ class App extends Composer
         $data = get_field('footer_group', 'options');
         $data = array(
             'data' => $data,
+        );
+        return $data;
+    }
+
+    /**
+     * Widget
+     *
+     * @return array
+     */
+    public function widgetData()
+    {
+        $widget_magazine = get_field('widget_magazine', 'options');
+        $widget_last_recipe = get_field('widget_last_recipe', 'options');
+        $data = array(
+            'widget_magazine' => $widget_magazine,
+            'widget_last_recipe' => $widget_last_recipe,
         );
         return $data;
     }
