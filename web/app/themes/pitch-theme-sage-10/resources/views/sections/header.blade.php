@@ -63,10 +63,10 @@
               <a href="{{ $header['data']['confederation_group']['link']['url'] }}"
                  aria-label="{!! $header['data']['confederation_group']['link']['title'] !!}"
                  target="{{ $header['data']['confederation_group']['link']['target'] }}">
-                {!! wp_get_attachment_image( $header['data']['confederation_group']['logo']['id'], 'medium','', array( "class" => "")) !!}
+                {!! wp_get_attachment_image( $header['data']['confederation_group']['logo']['id'], 'medium','', array( "class" => "img-fluid")) !!}
               </a>
             @else
-              {!! wp_get_attachment_image( $header['data']['confederation_group']['logo']['id'], 'medium','', array( "class" => "")) !!}
+              {!! wp_get_attachment_image( $header['data']['confederation_group']['logo']['id'], 'medium','', array( "class" => "img-fluid")) !!}
             @endif
           </div>
         @endif
