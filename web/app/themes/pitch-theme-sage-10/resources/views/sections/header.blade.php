@@ -20,22 +20,36 @@
           </a>
         </div>
         <div class="d-none d-lg-flex flex-row wp-links-desktop align-items-center">
-          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-            Newsletter
-          </a>
-          <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#accountModal">
-            Mon compte
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=100067401436602" aria-label="Facebook" target="_blank">
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/lejournaldupatissier" aria-label="Instagram" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
+          @if($header['data']['link_repeater'])
+            @foreach($header['data']['link_repeater'] as $item)
+              <a href="{{ $item['link']['url'] }}"
+                 class="link"
+                 aria-label="{!! $item['link']['title'] !!}"
+                 target="{!! $item['link']['target'] !!}">
+                {!! $item['link']['title'] !!}
+              </a>
+            @endforeach
+          @endif
+          @if($header['data']['facebook'])
+            <a href="{!! $header['data']['facebook']['url'] !!}"
+               aria-label="{!! $header['data']['facebook']['title'] !!}"
+               target="{!! $header['data']['facebook']['target'] !!}">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+          @endif
+          @if($header['data']['instagram'])
+            <a href="{!! $header['data']['instagram']['url'] !!}"
+               aria-label="{!! $header['data']['instagram']['title'] !!}"
+               target="{!! $header['data']['instagram']['target'] !!}">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          @endif
         </div>
         <div class="d-flex d-lg-none flex-row wp-links-mobile align-items-center">
           <i class="fa-regular fa-magnifying-glass"></i>
-          <a href="#" class="btn btn-primary" aria-label="" target="">S'abonner</a>
+          @if($header['data']['widget_group']['link'])
+            @include('partials.template-parts.link', ['item' => $header['data']['widget_group']['link'], 'class' => 'btn btn-primary'])
+          @endif
         </div>
       </div>
     </div>

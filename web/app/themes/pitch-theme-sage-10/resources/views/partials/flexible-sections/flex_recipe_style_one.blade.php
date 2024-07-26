@@ -52,12 +52,13 @@
                 @endif
                 <div class="d-flex flex-row wp-buttons">
                   @if($recipe['permalink'])
-                    @if($recipe['tag']->term_id === 4)
-                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Voir le pas à pas">Voir
-                        le pas à pas</a>
+                    @if($recipe['tag'])
+                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="{!! get_field('link_title', $recipe['tag']) !!}">
+                        {!! get_field('link_title', $recipe['tag']) !!}
+                      </a>
                     @else
-                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Découvrir la recette">Découvrir
-                        la recette</a>
+                      <a href="{{ $recipe['permalink']  }}" class="btn btn-secondary" aria-label="Découvrir la recette">
+                        Découvrir la recette</a>
                     @endif
                   @endif
                 </div>
