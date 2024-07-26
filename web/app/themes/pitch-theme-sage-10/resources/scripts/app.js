@@ -31,7 +31,7 @@ const main = async (err) => {
 
       if (!$slideshow.hasClass('slick-initialized')) {
         $slideshow.slick({
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
           infinite: false,
@@ -39,18 +39,6 @@ const main = async (err) => {
           autoplay: false,
           centerMode: false,
           responsive: [
-            {
-              breakpoint: 1220,
-              settings: {
-                slidesToShow: 2,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-              },
-            },
             {
               breakpoint: 480,
               settings: {
