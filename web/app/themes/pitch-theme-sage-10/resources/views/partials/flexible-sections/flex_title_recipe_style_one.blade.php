@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
           <div class="d-flex flex-column wp-items">
             @foreach($section['item_repeater'] as $item)
               <div class="d-flex flex-row justify-content-between">
