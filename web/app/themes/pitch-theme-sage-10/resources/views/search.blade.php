@@ -5,7 +5,7 @@
   <div class="wp-heading">
     <div class="container">
       <div class="d-flex flex-row justify-content-between">
-        <h1 class="section-title">Résultat(s) de votre recherche :</h1>
+        <h1 class="section-title">{!! $global['data']['search_result_title'] !!}</h1>
       </div>
     </div>
   </div>
