@@ -10,25 +10,35 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-          <div class="d-flex flex-column wp-items">
-            @foreach($section['item_repeater'] as $item)
-              <div class="d-flex flex-row justify-content-between">
-                <span class="name">{!! $item['name'] !!}</span>
-                <span class="quantity">{!! $item['quantity'] !!}</span>
-              </div>
-            @endforeach
+        @if($section['item_repeater'])
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="d-flex flex-column wp-items">
+              @foreach($section['item_repeater'] as $item)
+                <div class="d-flex flex-row justify-content-between">
+                  @if($item['name'])
+                    <span class="name">{!! $item['name'] !!}</span>
+                  @endif
+                  @if($item['quantity'])
+                    <span class="quantity">{!! $item['quantity'] !!}</span>
+                  @endif
+                </div>
+              @endforeach
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-lg-8 pt-2">
-          <div class="d-flex flex-column justify-content-between wp-steps">
-            @foreach($section['step_repeater'] as $step)
-              <div class="d-flex flex-row">
-                <p>{!! $step['text'] !!}</p>
-              </div>
-            @endforeach
+        @endif
+        @if($section['step_repeater'])
+          <div class="col-12 col-lg-8 pt-2">
+            <div class="d-flex flex-column justify-content-between wp-steps">
+              @foreach($section['step_repeater'] as $step)
+                @if($step['text'])
+                  <div class="d-flex flex-row">
+                    <p>{!! $step['text'] !!}</p>
+                  </div>
+                @endif
+              @endforeach
+            </div>
           </div>
-        </div>
+        @endif
       </div>
     </div>
   </div>

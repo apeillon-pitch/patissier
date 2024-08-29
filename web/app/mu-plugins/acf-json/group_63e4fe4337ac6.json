@@ -1442,7 +1442,7 @@
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -1450,7 +1450,7 @@
                                 "id": ""
                             },
                             "layout": "table",
-                            "min": 1,
+                            "min": 0,
                             "max": 0,
                             "collapsed": "",
                             "button_label": "Ajouter un ingrédient",
@@ -1507,7 +1507,7 @@
                             "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -1515,7 +1515,7 @@
                                 "id": ""
                             },
                             "layout": "table",
-                            "min": 1,
+                            "min": 0,
                             "max": 0,
                             "collapsed": "",
                             "button_label": "Ajouter une étape",
@@ -2552,6 +2552,7 @@
                                     "collapsed": "",
                                     "button_label": "Ajouter un élément",
                                     "rows_per_page": 20,
+                                    "parent_repeater": "field_6690eb260c251",
                                     "sub_fields": [
                                         {
                                             "key": "field_6690eb620c255",
@@ -2600,8 +2601,7 @@
                                             "append": "",
                                             "parent_repeater": "field_6690eb260c253"
                                         }
-                                    ],
-                                    "parent_repeater": "field_6690eb260c251"
+                                    ]
                                 }
                             ]
                         },
@@ -3030,5 +3030,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721911325
+    "modified": 1724918667
 }
