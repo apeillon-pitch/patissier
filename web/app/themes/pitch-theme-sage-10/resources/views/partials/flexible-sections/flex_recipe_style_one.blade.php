@@ -37,7 +37,7 @@
                     {!! $recipe['excerpt'] !!}
                   </div>
                 @endif
-                @if($recipe['tag']->term_id === 4)
+                @if($recipe['tag'] && $recipe['tag']->term_id === 4)
                   @if($recipe['thumbnail_repeater'])
                     <div class="row wp-thumbnails">
                       @foreach($recipe['thumbnail_repeater'] as $item)
