@@ -35,7 +35,8 @@
                             </div>
                           @endif
                         </div>
-                        <a href="{{ $recipe['permalink'] }}" class="btn btn-primary" aria-label="{!! $recipe['title'] !!}" target="_self">+</a>
+                        <a href="{{ $recipe['permalink'] }}" class="btn btn-primary"
+                           aria-label="{!! $recipe['title'] !!}" target="_self">+</a>
                       </div>
                     </div>
                   </div>
@@ -55,8 +56,12 @@
           @if($global['data']['link_subscribe'])
             @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
           @endif
-          @if($global['data']['link_discover_mag'])
-            @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+          @if($data['link_discover_mag'])
+            @include('partials.template-parts.link', ['item' => $data['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+          @else
+            @if($global['data']['link_discover_mag'])
+              @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+            @endif
           @endif
         </div>
       </div>

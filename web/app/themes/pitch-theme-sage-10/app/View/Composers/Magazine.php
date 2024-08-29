@@ -38,6 +38,7 @@ class Magazine extends Composer
             'magazine' => get_field('magazine'),
             'introduction' => get_field('introduction'),
             'recipes' => get_field('recipes'),
+            'link_discover_mag' => get_field('link_discover_mag'),
         ];
 
         return $data;
