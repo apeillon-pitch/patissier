@@ -5,7 +5,7 @@
 @switch($section['source'])
   @case('last')
     @php $magazines = getMagazines(1); @endphp
-  @break
+    @break
   @case('manual')
     @php $magazines = getMagazineById($section['magazine']); @endphp
     @break
@@ -31,13 +31,18 @@
                   @if($global['data']['link_subscribe'])
                     @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
                   @endif
-                  @if($global['data']['link_discover_mag'])
-                    @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+                  @if($magazine['link_discover_mag'])
+                      @include('partials.template-parts.link', ['item' => $magazine['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+                  @else
+                    @if($global['data']['link_discover_mag'])
+                      @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+                    @endif
                   @endif
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
+            <div
+              class="col-12 col-lg-6 mb-4 mb-lg-0 {{ $section['position'] === 'left' ? 'order-1' : 'order-1 order-lg-2' }}">
               @if($magazine['thumbnail'] && empty($magazine['recipes']))
                 <figure class="cover mb-0 primary style-one">
                   {!! wp_get_attachment_image($magazine['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}

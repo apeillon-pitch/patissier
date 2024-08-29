@@ -137,6 +137,7 @@ function getMagazineData($args)
             $date = get_field('date_string');
             $magazine = get_field('magazine');
             $recipes = get_field('thumbnails_recipes');
+            $link_discover_mag = get_field('link_discover_mag');
             $data[] = array(
                 'id' => $id,
                 'title' => $title,
@@ -146,7 +147,8 @@ function getMagazineData($args)
                 'date_short' => $date_short,
                 'date' => $date,
                 'magazine' => $magazine,
-                'recipes' => $recipes
+                'recipes' => $recipes,
+                'link_discover_mag' => $link_discover_mag,
             );
         }
         wp_reset_postdata();
