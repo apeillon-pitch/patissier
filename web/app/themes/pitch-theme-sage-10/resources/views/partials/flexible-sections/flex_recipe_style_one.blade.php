@@ -24,7 +24,9 @@
             <div class="col-12 col-lg-5 {{ $section['position'] === 'left' ? 'order-2' : 'order-2 order-lg-1' }}">
               <div class="d-flex flex-column wp-text">
                 <div class="d-flex flex-column wp-heading">
+                  @if($recipe['tag'])
                   <span class="overtitle">{!! $recipe['tag']->name !!}</span>
+                  @endif
                   <h2 class="section-title">{!! $recipe['title'] !!}</h2>
                   @if ($recipe['author'])
                     <h3 class="subtitle">par {!! $recipe['author']['name'] !!}</h3>
