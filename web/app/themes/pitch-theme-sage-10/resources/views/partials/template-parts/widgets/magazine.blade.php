@@ -1,5 +1,5 @@
 @if($data['magazine'])
-  @php $mag = getMagazineByCategory($data['magazine']) @endphp
+  @php $mag = getMagazineByCategory($data['magazine']->term_id) @endphp
   @if($mag)
     <div class="widget widget-magazine">
       <div class="d-flex flex-row wp-content align-items-center">

@@ -82,13 +82,14 @@ function getMagazines($number)
 function getMagazineByCategory($id)
 {
     $args = array(
+        'post_status' => 'publish',
         'post_type' => 'magazine',
         'posts_per_page' => 1,
         'tax_query' => array(
             array(
-                'taxonomy' => 'magazine',
+                'taxonomy' => 'taxo-magazine',
                 'field' => 'term_id',
-                'terms' => $id,
+                'terms' => array($id),
             ),
         ),
     );
