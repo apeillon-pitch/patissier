@@ -230,6 +230,22 @@
             "elements": "",
             "bidirectional": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_66d02c8a4b738",
+            "label": "Lien pour la découverte du magazine",
+            "name": "link_discover_mag",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -263,5 +279,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721054108
+    "modified": 1724918954
 }
