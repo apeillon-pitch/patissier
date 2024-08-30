@@ -11,7 +11,9 @@
         <div class="d-flex flex-column">
           <h3 class="name">{!! $widgets['widget_magazine']['title'] !!} {!! $data['magazine']->name !!}</h3>
           <div class="wp-cta">
-            <a href="" class="btn btn-primary" aria-label="S'abonner" target="_self">S'abonner</a>
+            @if($global['data']['link_subscribe'])
+              @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
+            @endif
             <a href="" class="btn btn-tertiary" aria-label="Découvrir le magazine" target="_self">Découvrir le
               magazine</a>
           </div>
