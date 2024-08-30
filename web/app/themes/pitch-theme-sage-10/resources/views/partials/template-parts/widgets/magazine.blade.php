@@ -14,8 +14,13 @@
             @if($global['data']['link_subscribe'])
               @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
             @endif
-            <a href="" class="btn btn-tertiary" aria-label="Découvrir le magazine" target="_self">Découvrir le
-              magazine</a>
+              @if($magazine['link_discover_mag'])
+                @include('partials.template-parts.link', ['item' => $magazine['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+              @else
+                @if($global['data']['link_discover_mag'])
+                  @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+                @endif
+              @endif
           </div>
         </div>
       </div>
