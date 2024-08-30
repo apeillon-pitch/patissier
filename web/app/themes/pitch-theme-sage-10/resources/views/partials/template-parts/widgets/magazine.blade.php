@@ -14,8 +14,8 @@
             @if($global['data']['link_subscribe'])
               @include('partials.template-parts.link', ['item' => $global['data']['link_subscribe'], 'class' => 'btn btn-primary'])
             @endif
-              @if($magazine['link_discover_mag'])
-                @include('partials.template-parts.link', ['item' => $magazine['link_discover_mag'], 'class' => 'btn btn-tertiary'])
+              @if($mag['link_discover_mag'])
+                @include('partials.template-parts.link', ['item' => $mag['link_discover_mag'], 'class' => 'btn btn-tertiary'])
               @else
                 @if($global['data']['link_discover_mag'])
                   @include('partials.template-parts.link', ['item' => $global['data']['link_discover_mag'], 'class' => 'btn btn-tertiary'])
