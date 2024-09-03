@@ -44,10 +44,10 @@ function podcast() {
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
-        'has_archive'           => 'podcast',
+        'has_archive'           => 'podcasts',
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
-        'rewrite'               => false,
+        'rewrite'               => true,
         'capability_type'       => 'page',
     );
     register_post_type( 'podcast', $args );
