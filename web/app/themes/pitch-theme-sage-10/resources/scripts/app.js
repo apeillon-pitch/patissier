@@ -18,7 +18,7 @@ const main = async (err) => {
     console.error(err);
   }
 
-  var menuItemId = menuItemData.menuItemId;
+ /* var menuItemId = menuItemData.menuItemId;
   var apiUrl = menuItemData.apiUrl;
 
   // Faire une requête AJAX pour obtenir le dernier magazine publié
@@ -30,7 +30,7 @@ const main = async (err) => {
       // Mettre à jour l'URL de l'item de menu
       $('#menu-item-' + menuItemId + ' > a').attr('href', latestMagazineUrl);
     }
-  });
+  });*/
 
   slideshowStyleOne();
   filterRecipes();
