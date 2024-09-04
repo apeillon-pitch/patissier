@@ -2479,10 +2479,10 @@
                                 "id": ""
                             },
                             "layout": "block",
-                            "min": 4,
-                            "max": 4,
+                            "min": 1,
+                            "max": 0,
                             "collapsed": "",
-                            "button_label": "Ajouter une recette",
+                            "button_label": "Ajouter un contact",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -3030,5 +3030,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724918667
+    "modified": 1725459042
 }
