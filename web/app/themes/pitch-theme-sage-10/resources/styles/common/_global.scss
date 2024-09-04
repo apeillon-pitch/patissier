@@ -20,6 +20,10 @@ body {
       padding: 3rem 0;
     }
 
+    a {
+      color: $secondary;
+    }
+
     &.bg-grey {
       background-color: $grey-four;
     }

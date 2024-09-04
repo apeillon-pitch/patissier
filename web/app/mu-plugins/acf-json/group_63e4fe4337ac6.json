@@ -2244,10 +2244,10 @@
                                 "id": ""
                             },
                             "layout": "table",
-                            "min": 4,
-                            "max": 4,
+                            "min": 1,
+                            "max": 0,
                             "collapsed": "",
-                            "button_label": "Ajouter une recette",
+                            "button_label": "Ajouter une question",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -3030,5 +3030,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725459042
+    "modified": 1725459501
 }
