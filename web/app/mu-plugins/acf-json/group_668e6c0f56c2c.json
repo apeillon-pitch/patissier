@@ -67,7 +67,7 @@
             "load_terms": 1,
             "return_format": "object",
             "field_type": "radio",
-            "allow_null": 0,
+            "allow_null": 1,
             "bidirectional": 0,
             "multiple": 0,
             "bidirectional_target": []
@@ -516,5 +516,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721742341
+    "modified": 1725543814
 }
