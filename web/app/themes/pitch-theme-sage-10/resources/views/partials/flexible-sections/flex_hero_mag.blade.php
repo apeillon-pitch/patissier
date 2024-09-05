@@ -15,6 +15,7 @@
                 @php $recipe = getRecipeById($recipe); @endphp
                 @if($recipe)
                   <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    {{ var_dump($recipe) }}
                     <div class="card-recipe style-three">
                       @if($recipe['thumbnail'])
                         <figure class="cover mb-0">
