@@ -3,6 +3,7 @@
     <div class="row justify-content-between">
       <div class="col-12 col-lg-8">
         <div class="wp-heading">
+          {{ var_dump($data) }}
           @if($data['thumbnail'])
             <figure class="cover thumbnail">
               {!! wp_get_attachment_image($data['thumbnail']['id'], 'large', '', array("class" => "img-fluid w-100")) !!}
