@@ -20,7 +20,7 @@ body {
       padding: 3rem 0;
     }
 
-    a {
+    a:not(.btn) {
       color: $secondary;
     }
 
