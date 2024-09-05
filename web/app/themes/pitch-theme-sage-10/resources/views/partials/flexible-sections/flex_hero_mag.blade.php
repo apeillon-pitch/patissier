@@ -11,7 +11,9 @@
           @endif
           @if($data['recipes'])
             <div class="row wp-recipes">
-              @foreach($data['recipes'] as $recipe)
+              {{ var_dump($recipes) }}
+
+            @foreach($data['recipes'] as $recipe)
                 @php $recipe = getRecipeById($recipe); @endphp
                 @if($recipe)
                   <div class="col-12 col-lg-6 mb-4 mb-lg-0">
