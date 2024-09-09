@@ -19,7 +19,7 @@
                     <span class="name">{!! $item['name'] !!}</span>
                   @endif
                   @if($item['quantity'])
-                    <span class="quantity">{!! $item['quantity'] !!}</span>
+                    <span class="quantity ms-2">{!! $item['quantity'] !!}</span>
                   @endif
                 </div>
               @endforeach
