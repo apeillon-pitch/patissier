@@ -93,6 +93,7 @@
     "wpackagist-plugin/wp-mail-smtp": "^3.7.0",
     "wpackagist-plugin/instagram-feed": "^6.4.3",
     "wpackagist-plugin/advanced-nocaptcha-recaptcha": "^7.3.1",
+    "wpackagist-plugin/addon-gravityforms-sendinblue-free": "^2.3.0",
     "roots/acorn": "^2.1"
   },
   "require-dev": {
