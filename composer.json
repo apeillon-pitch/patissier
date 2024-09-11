@@ -86,8 +86,6 @@
     "wp-media/wp-rocket": "^3.11",
     "wpackagist-plugin/classic-editor": "^1.6",
     "wpackagist-plugin/acf-flexible-content-modal": "^1.2.3",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.3",
-    "gravityforms/gravityforms": "*",
     "wpackagist-plugin/imagify": "^2.1.1",
     "wpackagist-plugin/redirection": "^5.3.9",
     "wpackagist-plugin/wp-mail-smtp": "^3.7.0",
