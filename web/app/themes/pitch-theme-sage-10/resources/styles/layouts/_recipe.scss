@@ -5,6 +5,10 @@
     figure {
       height: 596px;
       margin-bottom: 1.5rem;
+
+      @include media-breakpoint-down(sm) {
+        height: 320px;
+      }
     }
 
     h1 {
