@@ -78,7 +78,6 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/wordpress-seo": ">=19.1",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": ">=3.0.1",
-    "wpengine/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/better-admin-bar": ">=4.0.5",
     "wpackagist-plugin/duplicate-page": ">=4.5",
     "wpackagist-plugin/better-wp-security": ">=8.1.4",
