@@ -20,6 +20,10 @@
       figure {
         &.style-one {
           height: 636.01px;
+
+          @include media-breakpoint-down(sm) {
+            height: 318px;
+          }
         }
 
         &.primary {

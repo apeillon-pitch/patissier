@@ -36,6 +36,10 @@ body {
       display: block;
       position: absolute;
       z-index: -1;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
 
     &.top-left {
