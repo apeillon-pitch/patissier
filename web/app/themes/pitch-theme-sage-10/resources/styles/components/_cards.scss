@@ -59,6 +59,10 @@
 
     figure {
       height: 236px;
+
+      @include media-breakpoint-down(sm) {
+        height: 140px;
+      }
     }
   }
 
