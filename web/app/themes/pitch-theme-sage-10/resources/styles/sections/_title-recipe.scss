@@ -6,6 +6,11 @@
         font-size: 2.375rem;
         font-weight: 700;
         margin-bottom: 0.75rem;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 1.5rem;
+          line-height: 1.5;
+        }
       }
 
       .wp-items {
