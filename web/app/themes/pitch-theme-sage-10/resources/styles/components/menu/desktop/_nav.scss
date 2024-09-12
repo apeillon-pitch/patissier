@@ -89,6 +89,12 @@
                       }
                     }
                   }
+
+                  &:focus-visible,
+                  &:focus-within,
+                  &:focus {
+                    box-shadow: none;
+                  }
                 }
 
                 .dropdown-menu {
