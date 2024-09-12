@@ -17,7 +17,7 @@
                   <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                     <div class="card-recipe style-three">
                       @if($recipe['thumbnail'])
-                        <figure class="cover mb-0">
+                        <figure class="cover mb-2">
                           @if($recipe['tag'])
                             <span class="tag">{!! $recipe['tag']->name !!}</span>
                           @endif
