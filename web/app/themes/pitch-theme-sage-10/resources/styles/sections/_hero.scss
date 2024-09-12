@@ -21,6 +21,21 @@
 
     .mag {
       height: 543px;
+
+      @include media-breakpoint-down(lg) {
+        height: 100%;
+
+        img {
+          position: relative;
+          top: inherit;
+          left: inherit;
+          transform: inherit;
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+        }
+      }
     }
 
     .wp-recipes {

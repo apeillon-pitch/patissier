@@ -40,7 +40,7 @@ body {
 
         @include media-breakpoint-down(sm) {
           font-size: 2rem;
-          line-height: 1.2rem;
+          line-height: 1.2;
           margin-top: 12px;
         }
       }
