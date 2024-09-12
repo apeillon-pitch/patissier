@@ -99,12 +99,20 @@
 
     figure {
       height: 200px;
+
+      @include media-breakpoint-down(sm) {
+        height: 300px;
+      }
     }
 
     &.main {
       figure {
         height: calc(100% - 82px);
         min-height: 480px;
+
+        @include media-breakpoint-down(sm) {
+          min-height: 300px;
+        }
       }
     }
   }
