@@ -57,4 +57,22 @@
     </div>
   </div>
 </div>
+<!-- Modal -->
+@if($footer['data']['widget_newsletter']['fom_id'])
+  <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          @if($footer['data']['widget_newsletter']['title'])
+            <h2 class="modal-title fs-5" id="newsletterModalLabel">{!! $footer['data']['widget_newsletter']['title'] !!}</h2>
+          @endif
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {!! gravity_form( $footer['data']['widget_newsletter']['fom_id'], false, false, false, '', false ) !!}
+        </div>
+      </div>
+    </div>
+  </div>
+@endif
 

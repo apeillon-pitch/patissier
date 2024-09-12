@@ -187,3 +187,13 @@ footer {
     }
   }
 }
+
+.modal {
+  .gform_wrapper form .ginput_container_consent .gfield_consent_label {
+    color: inherit;
+  }
+
+  .gform_wrapper form .ginput_container_consent input {
+    margin-top: 2px;
+  }
+}

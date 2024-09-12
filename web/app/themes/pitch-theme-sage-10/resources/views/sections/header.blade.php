@@ -20,6 +20,11 @@
           </a>
         </div>
         <div class="d-none d-lg-flex flex-row wp-links-desktop align-items-center">
+          @if($footer['data']['widget_newsletter']['fom_id'])
+            <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+              Newsletter
+            </a>
+          @endif
           @if($header['data']['link_repeater'])
             @foreach($header['data']['link_repeater'] as $item)
               <a href="{{ $item['link']['url'] }}"
