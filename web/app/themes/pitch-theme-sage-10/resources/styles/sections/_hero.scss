@@ -23,7 +23,7 @@
       height: 543px;
 
       @include media-breakpoint-down(lg) {
-        height: 100%;
+        height: inherit;
 
         img {
           position: relative;
