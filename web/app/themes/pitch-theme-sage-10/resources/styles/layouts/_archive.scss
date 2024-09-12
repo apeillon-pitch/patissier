@@ -16,6 +16,12 @@
   .card-podcast {
     .wp-content {
       gap: 0.75rem;
+
+      iframe {
+        @include media-breakpoint-down(sm) {
+          min-height: 505px;
+        }
+      }
     }
 
     &:nth-child(odd) {
