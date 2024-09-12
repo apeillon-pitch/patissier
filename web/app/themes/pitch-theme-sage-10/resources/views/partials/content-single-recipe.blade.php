@@ -36,3 +36,6 @@
     </div>
   </div>
 </div>
+@if ($data['widget-recipe']['title'])
+  @include('partials.flexible-sections.flex_recipe_suggestion_style_one', ['section' => $data['widget-recipe']])
+@endif
