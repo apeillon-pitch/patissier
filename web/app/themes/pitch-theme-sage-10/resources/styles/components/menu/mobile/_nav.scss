@@ -20,6 +20,12 @@
             &:hover {
               color: $grey-two;
             }
+
+            &:focus-visible,
+            &:focus-within,
+            &:focus {
+              box-shadow: none;
+            }
           }
 
           &:first-child {
