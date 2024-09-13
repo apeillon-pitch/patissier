@@ -177,7 +177,7 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
         $latest_magazine_url = get_permalink($latest_magazine_id);
         wp_reset_postdata();
 
-        $menu_item_id = 355;
+        $menu_item_id = 1307;
         $menu_id = 2;
 
         $menu_items = wp_get_nav_menu_items($menu_id);
