@@ -161,6 +161,9 @@ function getMagazineData($args)
 
 function update_latest_magazine_menu_item($post_id, $post, $update) {
     // Vérifiez si c'est une révision
+    if (wp_is_post_revision($post_id)) {
+        return;
+    }
 
 
     // Requête pour obtenir le dernier magazine publié
