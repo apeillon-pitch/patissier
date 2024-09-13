@@ -60,6 +60,7 @@ function magazine() {
     register_post_type( 'magazine', $args );
 
 }
+
 add_action( 'init', 'magazine', 0 );
 
 function getMagazines($number)
@@ -158,13 +159,9 @@ function getMagazineData($args)
     }
 }
 
-add_action('save_post_magazine', 'update_latest_magazine_menu_item', 10, 3);
-
 function update_latest_magazine_menu_item($post_id, $post, $update) {
     // Vérifiez si c'est une révision
-    if (wp_is_post_revision($post_id)) {
-        return;
-    }
+
 
     // Requête pour obtenir le dernier magazine publié
     $latest_magazine_query = new WP_Query(array(
@@ -180,17 +177,28 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
         $latest_magazine_url = get_permalink($latest_magazine_id);
         wp_reset_postdata();
 
-        // ID de l'item de menu à mettre à jour
         $menu_item_id = 355;
+        $menu_id = 2;
 
-        // Mettre à jour l'item de menu avec la nouvelle URL
+        $menu_items = wp_get_nav_menu_items($menu_id);
+
+        $menu_item = null;
+        foreach ($menu_items as $item) {
+            if ($item->ID == $menu_item_id) {
+                $menu_item = $item;
+                break;
+            }
+        }
+
         $menu_item_data = array(
-            'ID' => $menu_item_id,
-            'url' => $latest_magazine_url,
+            'menu-item-url'       => $latest_magazine_url,
+            'menu-item-title'     => $menu_item->title,
+            'menu-item-parent-id' => $menu_item->menu_item_parent,
+            'menu-item-status' => 'publish',
         );
 
-        $result = wp_update_nav_menu_item(2, $menu_item_data);
 
+        $result = wp_update_nav_menu_item($menu_id, $menu_item_id, $menu_item_data);
         // Vérifiez si la mise à jour a réussi
         if (is_wp_error($result)) {
             error_log('Erreur lors de la mise à jour de l\'item de menu : ' . $result->get_error_message());
@@ -201,4 +209,6 @@ function update_latest_magazine_menu_item($post_id, $post, $update) {
         error_log('Aucun magazine trouvé.');
     }
 }
+
+add_action('save_post_magazine', 'update_latest_magazine_menu_item', 10, 3);
 
