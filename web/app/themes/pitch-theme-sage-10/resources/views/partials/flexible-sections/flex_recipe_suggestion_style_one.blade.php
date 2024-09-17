@@ -1,14 +1,25 @@
 @if(isset($section['section_options_group']))
   @php $options = getSectionOptions($section['section_options_group']); @endphp
 @endif
-@switch($section['source'])
-  @case('automatic')
-    @php $recipes = getRecipes(4); @endphp
-    @break
-  @case('manual')
-    @php $recipes = $section['recipes']; @endphp
-    @break
-@endswitch
+@if(is_singular('recipe'))
+  @switch($section['source'])
+    @case('automatic')
+      @php $recipes = getRecipesWithoutId(4, $data['id']); @endphp
+      @break
+    @case('manual')
+      @php $recipes = $section['recipes']; @endphp
+      @break
+  @endswitch
+@else
+  @switch($section['source'])
+    @case('automatic')
+      @php $recipes = getRecipes(4); @endphp
+      @break
+    @case('manual')
+      @php $recipes = $section['recipes']; @endphp
+      @break
+  @endswitch
+@endif
 @if($recipes)
   <div id="section-{{ $row }}"
        class="section recipe-suggestion style-one bg-grey {{ isset($section['section_options_group']) ? $options['oclasses'] : 'pt-default pb-default' }}">

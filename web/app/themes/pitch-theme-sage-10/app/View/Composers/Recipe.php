@@ -30,6 +30,7 @@ class Recipe extends Composer
     public function data()
     {
         $data = [
+            'id' => get_the_ID(),
             'title' => get_the_title(),
             'thumbnail' => get_field('thumbnail'),
             'excerpt' => get_field('excerpt'),

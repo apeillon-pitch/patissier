@@ -124,6 +124,24 @@ function getRecipes($number)
     return $data;
 }
 
+function getRecipesWithoutId($number, $id)
+{
+    $args = array(
+        'post_status' => 'publish',
+        'post_type' => 'recipe',
+        'posts_per_page' => $number,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post__not_in' => array($id),
+    );
+
+    $data = getRecipeData($args);
+
+    wp_reset_query();
+
+    return $data;
+}
+
 function getLastRecipeByTag( $tag)
 {
     $args = array(
