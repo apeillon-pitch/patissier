@@ -89,8 +89,12 @@
                 {!! wp_get_attachment_image( $header['data']['widget_group']['image']['id'], 'medium','', array( "class" => "")) !!}
               </figure>
               <div class="d-flex flex-column">
-                @if($header['data']['widget_group']['title'])
-                  <span class="mb-2">{!! $header['data']['widget_group']['title'] !!}</span>
+                @if($header['data']['widget_group']['title'] && $global['data']['link_discover_mag'])
+                  <span class="mb-2">
+                    <a href="{{ $global['data']['link_discover_mag']['url'] }}" aria-label="{!! $header['data']['widget_group']['title'] !!}" class="link" target="{{ $global['data']['link_discover_mag']['target'] }}">
+                    {!! $header['data']['widget_group']['title'] !!}
+                    </a>
+                  </span>
                 @endif
                 @if($header['data']['widget_group']['link'])
                   @include('partials.template-parts.link', ['item' => $header['data']['widget_group']['link'], 'class' => 'btn btn-primary'])

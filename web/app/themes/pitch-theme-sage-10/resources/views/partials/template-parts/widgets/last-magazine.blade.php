@@ -10,9 +10,14 @@
         <div class="d-flex flex-column">
           <h3 class="name">Magazine #{!! $mag[0]['magazine']->name !!}</h3>
           <div class="wp-cta">
-            <a href="" class="btn btn-primary" aria-label="S'abonner" target="_self">S'abonner</a>
-            <a href="" class="btn btn-tertiary" aria-label="Découvrir le magazine" target="_self">Découvrir le
-              magazine</a>
+            @if($global['data']['link_subscribe'])
+              <a href="{{ $global['data']['link_subscribe']['url'] }}" class="btn btn-primary" aria-label="{!! $global['data']['link_subscribe']['title'] !!}"
+                 target="_self">{!! $global['data']['link_subscribe']['title'] !!}</a>
+            @endif
+            @if($global['data']['link_discover_mag'])
+              <a href="{{ $global['data']['link_discover_mag']['url'] }}" class="btn btn-tertiary"
+                 aria-label="{!!  $global['data']['link_discover_mag']['title'] !!}" target="_self">{!!  $global['data']['link_discover_mag']['title'] !!}</a>
+            @endif
           </div>
         </div>
       </div>

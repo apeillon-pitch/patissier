@@ -95,6 +95,15 @@ header {
         color: $black-one;
         gap: 0.938rem;
 
+        a.link {
+          color: $black-one;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
         figure {
           position: relative;
           overflow: hidden;
