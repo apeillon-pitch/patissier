@@ -11,8 +11,9 @@
       <div class="col-12 col-lg-5">
         @if($footer['data']['menu_group']['col_repeater'])
           <div class="row wp-block menu">
+            @php $t = count($footer['data']['menu_group']['col_repeater']); $i = 1; @endphp
             @foreach($footer['data']['menu_group']['col_repeater'] as $col)
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-6 {{ $i == $col ? '' : 'mb-5' }}">
                 <div class="d-flex flex-column wp-menu text-center text-lg-start">
                   @if($col['title'])
                     <span class="title">{!! $col['title'] !!}</span>
@@ -24,6 +25,7 @@
                   @endif
                 </div>
               </div>
+              @php $i++; @endphp
             @endforeach
           </div>
         @endif
