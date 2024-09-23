@@ -6,6 +6,10 @@ footer {
   .wp-block {
     padding: 6.25rem 0 0;
 
+    @include media-breakpoint-down(lg) {
+      padding: 3.25rem 0 0;
+    }
+
     .title {
       font-size: 0.875rem;
       font-weight: 500;
