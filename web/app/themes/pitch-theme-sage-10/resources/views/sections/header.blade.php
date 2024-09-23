@@ -51,7 +51,9 @@
           @endif
         </div>
         <div class="d-flex d-lg-none flex-row wp-links-mobile align-items-center">
-          <i class="fa-regular fa-magnifying-glass"></i>
+          <a href="#" class="link-icon" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </a>
           @if($header['data']['widget_group']['link'])
             @include('partials.template-parts.link', ['item' => $header['data']['widget_group']['link'], 'class' => 'btn btn-primary'])
           @endif
