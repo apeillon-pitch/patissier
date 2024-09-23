@@ -131,7 +131,7 @@
         </div>
         <div class="grid">
           @php
-            $right_side_posts = array_slice($posts, 4, -1);
+            $right_side_posts = array_slice($posts, 5, -1);
           @endphp
           @foreach ($right_side_posts as $post)
             @php
