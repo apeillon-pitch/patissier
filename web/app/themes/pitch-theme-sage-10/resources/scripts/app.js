@@ -18,23 +18,8 @@ const main = async (err) => {
     console.error(err);
   }
 
- /* var menuItemId = menuItemData.menuItemId;
-  var apiUrl = menuItemData.apiUrl;
-
-  // Faire une requête AJAX pour obtenir le dernier magazine publié
-  $.getJSON(apiUrl, function(data) {
-    if (data.length > 0) {
-      var latestMagazine = data[0];
-      var latestMagazineUrl = latestMagazine.link;
-
-      // Mettre à jour l'URL de l'item de menu
-      $('#menu-item-' + menuItemId + ' > a').attr('href', latestMagazineUrl);
-    }
-  });*/
-
   slideshowStyleOne();
   filterRecipes();
-  setSelect2();
   dropdownMenu();
   getStickyMenu();
 
@@ -72,12 +57,6 @@ const main = async (err) => {
       if (selectedUrl) {
         window.location.href = selectedUrl;
       }
-    });
-  }
-
-  function setSelect2() {
-    $('.main select').select2({
-      minimumResultsForSearch: Infinity,
     });
   }
 

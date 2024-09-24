@@ -1,10 +1,9 @@
 @import 'common/variables';
 @import 'common/custom';
 @import "~bootstrap/scss/bootstrap";
-@import 'bootstrap';
-@import 'select2';
 @import "~slick-carousel/slick/slick.scss";
 @import "~slick-carousel/slick/slick-theme.scss";
+@import 'select2';
 
 /** Import theme styles */
 @import 'common/global';
