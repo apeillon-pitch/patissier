@@ -71,7 +71,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          {!! gravity_form( $footer['data']['widget_newsletter']['fom_id'], false, false, false, '', true ) !!}
+          {!! gravity_form( 3, false, false, false, '', true, 12 ) !!}
         </div>
       </div>
     </div>

@@ -107,3 +107,5 @@ function my_acf_admin_head() {
   <?php
 }
 add_action('acf/input/admin_head', 'my_acf_admin_head');
+
+add_filter( 'gform_confirmation_anchor_3', '__return_false' );
