@@ -39,7 +39,7 @@
             <a href="{!! $header['data']['facebook']['url'] !!}"
                aria-label="{!! $header['data']['facebook']['title'] !!}"
                target="{!! $header['data']['facebook']['target'] !!}">
-              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
             </a>
           @endif
           @if($header['data']['instagram'])
