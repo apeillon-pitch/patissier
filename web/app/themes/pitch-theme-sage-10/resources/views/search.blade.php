@@ -14,10 +14,21 @@
     <div class="container">
       @if (! have_posts())
         <x-alert type="warning">
-          {!! __('Sorry, no results were found.', 'sage') !!}
+          @if( (ICL_LANGUAGE_CODE =='en' ))
+            Sorry, no results were found.
+          @else
+            Désolé, aucun résultat n'a été trouvé.
+          @endif
         </x-alert>
 
-        {!! get_search_form(false) !!}
+        <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+          <label>
+            <span class="screen-reader-text"><?php esc_html_e('Search for:', 'jdp'); ?></span>
+            <input type="search" class="search-field" placeholder="<?php esc_attr_e('Search …', 'jdp'); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+          </label>
+          <button type="submit" class="search-submit"><?php esc_html_e('Search', 'jdp'); ?></button>
+        </form>
+
       @endif
 
       <div class="d-flex flex-column">
